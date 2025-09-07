@@ -148,6 +148,9 @@ body {
     font-size: 20px;
     padding: 10px;
 }
+.space {
+    background-color: black; margin: 10vh 98vw;
+}
 .image-text-background {
     width: 100vw;
     position: relative;

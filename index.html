@@ -784,8 +784,195 @@
             <video width="320" height="240" controls>
                 <source src="files/FastRobots/Lab2/Stunt.mp4" type="video/mp4"> </video>
 
-
+    </div>
+    <div id="FastRobot_Lab3" class="subtabcontent">
+        <div style="background-color: black; margin: 10vh 98vw;"></div>
+        <div style="width:98vw;">
+            <h2 style="color:white;">Lab 3</h2>
+            <p>The purpose of this lab is to set up the two Time of Flight (TOF) sensors. The sections include a prelab, analysing the 
+                TOF sensors one at a time, and being able to read both TOF sensors on the board at once (the challenge in reading both at once 
+                being conflicting default I2C identifiers for communication).
+            </p>
         </div>
+        <div class="space"></div>
+        <h2>Prelab</h2>
+        <div class="text-row">
+            <div class="left-column">
+                <h2 style="color:white">I2C Address</h2>
+            </div>
+            <div class="right-column">
+                <p>
+                    The I2C sensor address according to the provided example script is 0x29. The documentation for the 
+                    sensor states that the address is 0x52. However, the least significant bit indicates read/write access. Since this bit is currently 
+                    0, the value 0x29 with an extra 0 (shifted left by 1) results in the documented value of 0x52.
+                </p>
+            </div>
+        </div>
+        <div class="text-row" style="background-color:white;">
+            <div class="left-column">
+                <h2>Using 2 TOF Sensors</h2>
+            </div>
+            <div class="right-column">
+                <p style="color:black">
+                    The QWIIC cables had to be cut to use the TOF sensors. The longer cables were used for these sensors as opposed 
+                to the IMU. Placement for detection matters much more for the TOF sensors (ie they must be able to reach the front or sides). For 
+                the IMU, rotation can be detected from multiple points on the robot without needing particularly specific placement in one area. 
+                Therefore, increasing the range of the TOF sensors was more important than increasing the range of the IMU. The QWIIC connectors 
+                were also connected to the back on the TOF sensors. The TOF sensors need to face outward from the robot, so this connection would shorten 
+                the length that the wires need to travel, and efficiently prevent them from wrapping around the front of the sensor when mounted.
+                </p>
+            </div>
+        </div>
+        <div class="text-row" style="background-color:orangered;">
+            <div class="left-column">
+                <h2 style="color:black">Sensor Placement on the Robot</h2>
+            </div>
+            <div class="right-column">
+                <p style="color:white">
+                    The two TOF sensors are placed on the robot with one sensor on the front of the car and one on the right 
+            side of the car. This means that the robot can sense if it is about to directly run into objects. Additionally, it should be able 
+            to sense if it is too close to side obstacles and needs to turn. If it is too close, it may need to adjust left. If it is too far, 
+            especially in a maze setting, it may need to adjust back to the right to avoid hitting anything. Furthermore in a maze like 
+            setting, if the front sensor is close to an obstacle, it is time to turn. Having a sensor on the side can hint to the robot 
+            which directions that maze might go. For example, if the right side does not detect nearby obstacles, then the robot can safely turn 
+            to the right. If there obstacles to the right and the front, and the robot came from the back, then it is likely that the robot should 
+            first examine the leftward direction to continue (and it this is also blocked go back along the original path).
+                </p>
+            </div>
+        </div>
+        <div class="text-row">
+            <div class="left-column">
+                <h2 style="color:white">Wiring Diagram</h2>
+            </div>
+            <div class="right-column" style="display: flex; align-items: center; justify-content: center;">
+                <img src="files/FastRobots/Lab3/WiringDiagram.png", width="60%">
+            </div>
+        </div>
+
+        <div class="space"></div>
+        <h2>Analysing Individual TOFs</h2>
+        <div style="width:50%;margin-right: auto;margin-left: auto;">
+            <img src="files/FastRobots/Lab3/TOFQWIIC.jpg" style="width:50%">
+        </div>
+        <p>The image shows the TOF sensors connected to the board. For indivisual testing only one will remain plugged into the breakout board.</p>
+        <div class="text-row">
+            <div class="right-column">
+                <h3>Sensing the TOF sensor with the Artemis</h3>
+                <p>
+                    The I2C address of the TOF sensor was found to be 0x29, as discussed also in the prelab 
+                    (when shifted to the left by 1, the value matched the documentation's cited value of 0x52). The initial scan shown was also done with 
+                    one sensor attached, so only one port detects the TOF device. The other port does not detect a device.
+                </p>
+            </div>
+            <div class="left-column" style="display: flex; align-items: center; justify-content: center;">
+                <img src="files/FastRobots/Lab3/I2CScan.png" style="width:100%;margin-left:auto;margin-right:auto;">
+            </div>
+        </div>
+        <img src="files/FastRobots/Lab3/TOFDataSetup.jpg" style="width:100%;margin-left:auto;margin-right:auto;">
+        <h3>One TOF Sensor Data and Mode</h3>
+        <p>The TOF sensor was set to the short range mode. The short, medium, and long range modes are meant to be used for 
+            approx. 1.3, 3, and 4 meters. The use cases that seem to mostly exist in future labs to prepare for are not sensing obstacles particularly 
+            far away, so the 1.3 meter range would best suit future uses of the robot. The sensors both needed to be tested, and experiments are 
+            performed on both sensors named Sensor 1 and Sensor 2. The experimental setup to test the sensors is shown above.</p>
+        <h3>Experimental Analysis of. . .</h3>
+        <div class="text-row">
+            <div class="left-column">
+                <h3 style="color:white">Range</h3>
+            </div>
+            <div class="right-column">
+                <p>
+                    The full range of the short mode was tested, to test if the range was practically accurate. 
+            The sensor was taped to the 0 mark on a measuring tape, and every 10 cm (0.1 m) was tested using the method from s
+            cript Example2_SetDistanceMode.ino, but adapted to send data over 
+            bluetooth for processing and analysis. In order to accurately determine the true range of the sensor 
+            in the short mode, as much space as possible was cleared in front of the sensor and a measurement was taken. 
+            This resulted in a measurement of 3.686 meters. Then, measurements were taken at each of the 0.1 m marks until they no longer detected a reasonable distance. 
+            At 0.8m, sensor 2 returned completely unreasonable values (approx. 3.5 m!). Sensor 1 started returning unreasonable values at 1.1 m. 
+            Neither sensor worked for the full expected short range, but sensor 1 was much closer to the full expected range than sensor 2.
+                </p>
+            </div>
+        </div>
+        <div class="text-row" style="background-color: white;">
+            <div class="left-column">
+                <h3>Accuracy</h3>
+                <p style="color:black">
+                    1000 measurements were taken at each Real Distance (using an array of data then sent over bluetooth), and 
+                the average reading was calculated from this array for the Average Sensor Distance in the plot. Since the data stopped being useful or 
+                accurate after 1.0 meters for sensor 1 and 0.8 meters for sensor 2, the r squared value was calculated for the line of fit y=x up until the 
+                point of failure. The R sqaured value for Sensor 1 is 0.97, and for Sensor 2 0.99. While sensor 1 had the better range, sensor 2 had 
+                the slightly better accuracy within its funcitoning range.
+                </p>
+            </div>
+            <div class="right-column" style="display: flex; align-items: center; justify-content: center;">
+                <img src="files/FastRobots/Lab3/TOFAverageData.png", width="65%">
+            </div>
+        </div>
+        <div class="text-row" style="background-color: orangered;">
+            <div class="left-column">
+                <h3 style="color:black">Repeatability</h3>
+                <p>The repeatability of the sensor was tested by taking the standard deviation of the measurements taken for the 
+                    accuracy analysis (within the determined reasonable operating range). These are graphed below. The standard deviation of all sensor 
+                    1 and 2 values are respectively 2.05 and 1.71.The two sensors are similarly repeatable.</p>
+            </div>
+            <div class="right-column" style="display: flex; align-items: center; justify-content: center;">
+                <img src="files/FastRobots/Lab3/TOFStandardDeviation.png", width="65%">
+            </div>
+        </div>
+        <div class="text-row">
+            <div class="left-column">
+                <h3 style="color:white">Ranging Time</h3>
+            </div>
+            <div class="right-column">
+                <p>
+                    The time it takes for the sensor to range was measured by the time between measurements. Note that this was done with 
+            a delay programmed if the sensor did not yet have a ready measurement (not just collecting timestamps as fast as possible if the distance wasn't ready yet).
+            The timestamp of each 
+            measurement was recorded and the difference in time between each measurement (t_i - t_i-1) was averaged. The average difference 
+            in time between measurements was 97.74 ms.
+                </p>
+            </div>
+        </div>
+
+        <div class="space"></div>
+        <h2>Two TOF Sensors & IMU</h2>
+        <p style="color:white">Instead of using the XSHUT pins, the address of the first TOF sensor was changed upon starting up the Artemis. 
+            The code run to set up both TOF sensors is shown below, as well as the function that collects the data from one sensor and the call 
+            to this function used for both sensors in this example. The video demonstrates that when run, one sensor (pointed towards the ceiling) 
+            returns a large value, and the other pointed at the table returns a very small distance value. When flipped, these sensors show opposite 
+            behaviour. </p>
+        <div class="text-row" style="height:40vh;">
+            <img src="files/FastRobots/Lab3/MultiTOFSetup.png" style="width:30%">
+            <img src="files/FastRobots/Lab3/MultiTOFDataFunction.png" style="width:30%">
+            <img src="files/FastRobots/Lab3/MultiTOFDataCall.png" style="width:30%">
+        </div>
+        <div class="space"></div>
+        <p>The results of the above code were usccessful, the terminal shows sensible readings from both sensors. </p>
+        <div style="display: flex; align-items: center; justify-content: center;"><video height="30%" controls>
+            <source src="files/FastRobots/Lab3/MultiTOFDemo.mp4" type="video/mp4"> </video> </div>
+        
+        <h3>TOF Sensor Speed</h3>   
+        <p style="color:white" >To test the sensor speed, the time was printed as frequently as possible. The distances were only printed if both were ready. The code to 
+            achieve this is shown below, as well as a breif portion of the output (the entire output after running the loop for ten seconds was too 
+            large to reasonably attach here). It can be seen in the attached output section that the both sensors are usually ready after 
+            approx. 100 - 200 ms. The time prints out quickly, but both sensors getting new data (the checkForDataReady() functions) are 
+            the limiting factor. </p>
+        <div class="text-row">
+            <img src="files/FastRobots/Lab3/TOFSpeedCode.png" style="height:50vh">
+            <img src="files/FastRobots/Lab3/TOFSpeedOutput.png" style="height:50vh">
+        </div>
+
+        <div class="space"></div>
+        <h3>2 TOF Sensor Data and IMU Data Graph</h3>
+        <p style="color:white">The data from the two TOF sensors and the IMU were graphed. The data was collected for 10 seconds at the same time, 
+            and the 
+            data was sent over bluetooth to the Jupyter Notebook for processing/ graphing. </p>
+            <div class="text-row">
+                <img src="files/FastRobots/Lab3/TOFDataGraph.png" style="height:50vh">
+                <img src="files/FastRobots/Lab3/IMUDataGraph.png" style="height:50vh">
+            </div>
+
+    </div>
+
 
     
     </div>
