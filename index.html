@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Brooke Hudson - Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- make the main tab bar  -->
+    <!-- make a secondary tab bar when hovering over a tab, dissapears when not hovering primary or secondary tab bar -->
+    <tab class="tab">
+        <div class="tab-set">
+        <button class="tablinks" onclick="openTab(event, 'HomePage')" id="defaultOpenHomePage">Home Page</button>
+        </div>
+        <!-- <button class="tablinks" onclick="openTab(event, 'CVDrone')">Computer Vision Drone</button> -->
+        <div class="tab-set">
+            <button class="tablinks" onclick="openTab(event, 'SeniorDesign')">Traffic Object Detection (Senior Design)</button>
+            <tab class="subtab" id="subtab">
+                <button class="sublinks" onclick="openSubTab(event, 'SeniorDesign_Overview')" id="defaultOpenSeniorDesign">Project Overview</button>
+                <button class="sublinks" onclick="openSubTab(event, 'SeniorDesign_Hardware&Electronics')">Hardware and Electronics</button>
+                <button class="sublinks" onclick="openSubTab(event, 'SeniorDesign_CV')">Object Detection Implementation</button>
+                <button class="sublinks" onclick="openSubTab(event, 'SeniorDesign_LoRaWAN')">LoRaWAN Data Transmission</button>
+            </tab>
+        </div>
+        <div class="tab-set">
+            <button class="tablinks" onclick="openTab(event, 'FastRobot')">Fast Robotics</button>
+            <tab class="subtab" id="subtab2">
+                <button class="sublinks" onclick="openSubTab(event, 'FastRobot_Overview')" id="defaultOpenFastRobot">Project Overview</button>
+                <button class="sublinks" onclick="openSubTab(event, 'FastRobot_Lab1')">Lab 1</button>
+                <button class="sublinks" onclick="openSubTab(event, 'FastRobot_Lab2')">Lab 2</button>
+                <button class="sublinks" onclick="openSubTab(event, 'FastRobot_Lab3')">Lab 3</button>
+                <button class="sublinks" onclick="openSubTab(event, 'RastRobot_Lab4')">Lab 4</button>
+                <button class="sublinks" onclick="openSubTab(event, 'FastRobot_Lab5')">Lab 5</button>
+                <button class="sublinks" onclick="openSubTab(event, 'FastRobot_Lab6')">Lab 6</button>
+                <button class="sublinks" onclick="openSubTab(event, 'FastRobot_Lab7')">Lab 7</button>
+                <button class="sublinks" onclick="openSubTab(event, 'RastRobot_Lab8')">Lab 8</button>
+                <button class="sublinks" onclick="openSubTab(event, 'FastRobot_Lab9')">Lab 9</button>
+                <button class="sublinks" onclick="openSubTab(event, 'RastRobot_Lab10')">Lab 10</button>
+                <button class="sublinks" onclick="openSubTab(event, 'FastRobot_Lab11')">Lab 11</button>
+        </div>
+        <div class="tab-set">
+            <button class="tablinks" onclick="openTab(event, 'MakeAThon')">Big Red Make-A-Thon</button>
+            <tab class="subtab" id="subtab3">
+                <button class="sublinks" onclick="openSubTab(event, 'MakeAThon_Overview')" id="defaultOpenMakeAThon">Project Overview</button>
+                <button class="sublinks" onclick="openSubTab(event, 'MakeAThon_Tools')">PLACEHOLDER</button>
+        </div>
+    </tab>
+
+
+    <!-- make the tab content -->
+    <div id="HomePage" class="tabcontent">
+        <!-- Add scrolling photo bar -->
+         <div class="static-image-container" style="top:0px;">
+         <div class="image-container">
+            <img class="scroll_img" src="files/image_cycle_makeAThon.png">
+            <img class="scroll_img" src="files/image_cycle_ithacaCommons.png">
+            <img class="scroll_img" src="files/image_cycle_droneCloseUp.jpg">
+            <img class="scroll_img" src="files/image_cycle_labPhoto.png">
+            <img class="scroll_img" src="files/image_cycle_makeAThon.png">
+            <img class="scroll_img" src="files/image_cycle_ithacaCommons.png">
+            <img class="scroll_img" src="files/image_cycle_droneCloseUp.jpg">
+            <img class="scroll_img" src="files/image_cycle_labPhoto.png">
+         </div>
+         </div>
+        <!-- About Me Section -->
+         <div class="text-row" style="padding: 5vh 3vw;">
+            <div class="left-column">
+            <h2>About Me</h2>
+                <div class="resume-link">
+                <a href="files/2025Resume_BrookeHudson.pdf" download>Download My Resume</a>
+                </div>
+            </div>
+            <div class="right-column">
+            <p>I am a new graduate from Cornell University, having double majored in Computer Science and Mechanical Engineering. 
+                I have been involved in a variety of projects, with interest in robotics (Cornell CUP robotics, Fast Robots project, 
+                Big Red Make-a-thon) and some environmental science (senior design project, Cornell University Project Greenhouse, Cape Henlopen 
+                State Park Internship). This portfolio chronicles several of these technical projects. This portfolio is also a bit or a 
+                mini-project itself! No templates or bootstrap/ similar assistive tools were used in its creation: only HTML, CSS, and JavaScript. </p>
+            </div>
+            </div>
+        <!-- Contact Information -->
+         <div class="text-row" style="background-color: lightgoldenrodyellow;padding: 0vh 3vw;">
+            <div class="left-column">
+            <h2 style="color: black; font-size: 30px;">Contact Information</h2>
+            </div>  
+            <div class="right-column" style="float: left;">
+                <div class="text-row" style="background-color: lightgoldenrodyellow;padding: 0px;">
+                    <div class="left-column" style="background-color: lightgoldenrodyellow;width: fit-content;float: left;">
+                    <a href="https://www.linkedin.com/in/brooke-hudson-658032228/" target="_blank">
+                    <img id="linkedin" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" style="height:24px;width:auto;display:inline" alt="Linkedin icon" />
+                    </a>
+                    </div>
+                    <div class="right-column" style="background-color: lightgoldenrodyellow;float: left;">
+                    <p style="color: black;">bah253@cornell.edu</p>
+                    </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="SeniorDesign_Overview" class="subtabcontent">
+        <!-- title  -->
+        <div style="background-color: black; margin: 10vh 100vw;"></div>
+        <h2 style="color:white;font-size: 30px;">Cornell University Senior Design Project</h2>
+        <h2 style="padding:0.5% 0;">Traffic Tracking Using Object Detection</h2>
+        <!-- Add scrolling photo bar -->
+         <!-- <div class="static-image-container">
+         <div class="image-container" style="height: 50vh;animation-duration: 35s;">
+            <img class="scroll_img" src="files/image_cycle2_seniorDesignReal.png">
+            <img class="scroll_img" src="files/image_cycle2_seniorDesignTestResult.png">
+            <img class="scroll_img" src="files/image_cycle2_seniorDesignSchematic.png">
+            <img class="scroll_img" src="files/image_cycle2_seniorDesignTestSetup.png">
+            <img class="scroll_img" src="files/image_cycle2_seniorDesignReal.png">
+            <img class="scroll_img" src="files/image_cycle2_seniorDesignTestResult.png">
+            <img class="scroll_img" src="files/image_cycle2_seniorDesignSchematic.png">
+            <img class="scroll_img" src="files/image_cycle2_seniorDesignTestSetup.png">
+        </div>
+        </div> -->
+        <!-- Project Overview -->
+        <div class="text-image-background">
+            <div class="color-image-background">
+                <img class="background-image" src="files/image_background_SrDesignScematic.png">
+                <h2 style="color:black;font-size: 40px;position: absolute; top: 10%;"> Project Overview and Purpose</h2>
+                <p style="color:black;position: absolute; top: 25%;width: 50%;">
+                    For this project Cornell University partnered with a local environmental justice group "Blueprint Geneva." Blueprint 
+                    Geneva addresses a variety of environmental concerns including general air quality, landfill pollution 
+                    (a landfill is located in Geneva), and traffic pollution. The environmental group was not satisfied with their current 
+                    method of traffic tracking, which requested high school volunteers to manually count the cars. Drawbacks of 
+                    this method include a lack of data at times when high schoolers are not available (most of the school day everyday 
+                    and most of the night) and human error in count totals and traffic type classification. Therefore, Blueprint Geneva 
+                    requested a device that would track traffic. The students involved designed and tested a system 
+                    that would use object detection/ computer vision to identify the cars and use LoRaWAN data transmission to send the data 
+                    back for the environmental group to analyze. 
+                </p>
+            </div>
+        </div>
+        <h2 style="padding:1% 0;position: relative;text-align: center;">Quantitative Goals</h2>
+        <div style="background-color: orangered;height: 0.5vh; width: 100vw;"></div>
+        <div style="height:20vh" class="text-row">
+            <div class="stat-block" style ="width:32vw;">
+                <p>The device detects</p>
+                <h2>13</h2>
+                <p>different types of vehicles.</p>
+            </div>
+            <div class="stat-block-divider"></div>
+            <div class="stat-block" style ="width:32vw;">
+                <p>The cost per device is</p>
+                <h2>$ 196.72</h2>
+                <p>per traffic tracking unit.</p>
+            </div>
+            <div class="stat-block-divider"></div>
+            <div class="stat-block" style ="width:32vw;">
+                <p style="width:33vw;">Object Detection Uses <br>Ultralytics YOLO version</p>
+                <h2 style="width:33vw;">8</h2>
+                <div class="resume-link" style="width:fit-content;margin-left: auto; margin-right: auto;">
+                    <a href="https://github.com/ultralytics/ultralytics" target="_blank">Learn More About Ultralytics YOLO</a></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="SeniorDesign_Hardware&Electronics" class="subtabcontent">
+        <div style="background-color: black; margin: 10vh 100vw;"></div>
+        <h2 style="color:white;font-size: 30px;">Hardware and Electronics Selection</h2>
+        <h2 style="padding:0.5% 0;">Traffic Tracking Using Object Detection</h2>
+        <!-- Add scrolling photo bar -->
+         <div class="static-image-container">
+         <div class="image-container" style="height: 50vh;animation-duration: 35s;">
+            <img class="scroll_img" src="files/image_cycle2_seniorDesignReal.png">
+            <img class="scroll_img" src="files/image_cycle2_raspberryPi4.png">
+            <img class="scroll_img" src="files/image_cycle2_seniorDesignSchematic.png">
+            <img class="scroll_img" src="files/image_cycle2_seniorDesignTestSetup.png">
+            <img class="scroll_img" src="files/image_cycle2_seniorDesignReal.png">
+            <img class="scroll_img" src="files/image_cycle2_raspberryPi4.png">
+            <img class="scroll_img" src="files/image_cycle2_seniorDesignSchematic.png">
+            <img class="scroll_img" src="files/image_cycle2_seniorDesignTestSetup.png">
+        </div>
+        </div>
+        <div class="text-row" style="width: 100%;height:40vw;">
+            <div style="width: 50%;height: 100%;display:flex;align-items: center;justify-content: center;">
+                <h2 style="color:white;">The Electronics</h2>
+            </div>
+            <div class="hover-image-container" style="width:50%;height:100%">
+                <img src="files/image_electronics_schematic.png" alt="The electronics schematic includes a raspberry pi 4b, an arducam, an 
+                M0 feather board with LoRaWAN data transmission capability, and a buck converter to the power supply." style="width:100%;">
+                <!-- <div class="hover-block" style="
+                    position: realtive;
+                    top: 0;
+                    width: 50%;
+                    height: 50%;
+                    background-color: white;">
+                </div> -->
+            </div>
+        </div>
+        <!-- Add BOM and Justification -->
+        <div style="background-color: orangered;height: 0.5vh; width: 100%;padding:0"></div>
+        <div style="width: 100vw;display:flex;flex-direction: row;padding:0">
+            <div>
+                <h2>Part Justification</h2>
+            </div>
+            <div class="dropdown-menu" style="position:absolute; left: 80%;margin:10px;" >
+                <div class="dropdown-label">
+                    <p>Select A Part</p>
+                    <div class="dropdown-options">
+                        <button class="dropbtn" onclick="openDropdownMenu(event, 'raspberryPi')">Raspberry Pi</button>
+                        <button class="dropbtn" onclick="openDropdownMenu(event, 'camera&lens')">Arducam & Lens</button>
+                        <button class="dropbtn" onclick="openDropdownMenu(event, 'featherM0Board')">AdaFruit Feather M0 Board</button>
+                        <button class="dropbtn" onclick="openDropdownMenu(event, 'ACDCBuckConverter')">AC-DC Buck Converter</button>
+                        <button class="dropbtn" onclick="openDropdownMenu(event, 'enclosure&switch')">Enclosure & Push Switch</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dropdowncontent" id="no-content">
+            <div style="width:100vw;height:30vh;background-color: black;"></div>
+        </div>
+        <div class="dropdowncontent" id="raspberryPi">
+            <h3>Raspberry Pi 4B</h3>
+            <div class="text-row">
+                <div class="left-column">
+                    <p>The team first attempted to use a Raspberry Pi Zero 2 W. This has 512 MB of RAM, while the object detection algorithm 
+                        needs ~450 MB of available RAM without including RAM needed for the photo storage itself (each photo frame takes 
+                        10-15 MB of storage). This resulted in limited performance from the Zero W 2 during initial tests. The Pi would freeze 
+                        for long periods of time (not ideal for a real-time object detection use case) or crash and need to be rebooted (not ideal 
+                        for almost ~any~ use case).
+                    </p>
+                </div>
+                <div class="right-column" style="display: inline-flex;justify-content: center; align-items:center; flex-direction: column;">
+                    <img src="files/image_raspberryPi02W.png" alt="Raspberry Pi Zero W 2 board" style="width: 60%;">
+                    <p style="text-decoration: wavy; font-size:15px">A raspberry Pi Zero W 2</p>
+                </div>
+            </div>
+            <div class="text-row">
+                <div class="left-column" style="width:55vw;display: inline-flex;justify-content: center;align-items:center;flex-direction: column;">
+                    <img src="files/image_raspberryPi4B.png" alt="Raspberry Pi 4B board" style="width: 60%;">
+                    <p style="text-decoration: wavy; font-size:15px">A raspberry Pi 4B</p>
+                </div>
+                <div class="right-column" style="width:40vw;padding:0vh 1vw;">
+                    <p>The team then switched to a Raspberry Pi 4B, which has 8 GB of RAM. (While some Pi 4s have different storage amounts and 
+                        this could be somewhat overkill, this was the only Pi available to the team with sufficient memory). This allowed the 
+                        object detection algorithm to run without pushing its memory limits. 
+                    </p>
+                </div>
+        </div>
+
+        </div>
+        <div class="dropdowncontent" id="camera&lens">
+            <h3>Arducam Camera and Lens</h3>
+            <div class="text-image-background" style="width:100vw;height:15vh;">
+                <div class="color-image-background" style="width: 100%;
+                height: fit-content;
+                position: relative;
+                background-color: black;">
+                    <img class="background-image" src="files/image_arducam_background.png" 
+                    alt="The Arducam camera and lens used for the object detection system."
+                    style="mask-image: linear-gradient(
+                        to left, white, transparent 90%
+                      );">
+                    <p style="color:white;position: absolute; top: 25%;width: 50%;">Our chosen camera: the Arducam for Raspberry Pi HQ Camera Module, 12.3MP IMX477 has adjustable focus and zoom (8-50mm)
+                        since the community partner has indicated that they intend for 
+                        the unit to be used in multiple locations. The main drawback of this method is that the camera video feed 
+                        can only be seen while the device is attached to a computer monitor, which means initial setup will require a 
+                        computer monitor onsite. This is an inconvenient and awkward setup, but this is only required for the first use.
+                    </p>
+                </div>
+                
+        </div>
+        </div>
+        <div class="dropdowncontent" id="featherM0Board">
+            <h3>AdaFruit Feather M0 Board with LoRaWAN</h3>
+            <div class="text-image-background">
+                <div class="color-image-background" style="width: 100%;
+                height: fit-content;
+                position: relative;
+                background-color: black;">
+                    <img class="background-image" src="files/image_featherM0_background.png"
+                    alt="The AdaFruit Feather M0 board with RFM95 LoRaWAN data transmission capabilities."
+                    style="mask-image: linear-gradient(
+                        to left, white, transparent 70%
+                      );">
+                    <p style="color:white;position: absolute; top: 25%;width: 50%;">
+                        The community partner specified that the device may be used in areas without WiFi; however, the greater Ithaca and 
+                        Geneva area have LoRaWAN coverage. Therefore, the AdaFruit Feather M0 board with RFM95 LoRaWAN data transmission 
+                        was chosen to transmit the data back to the community partner. Additionally, the board had been used by all team members 
+                        involved in the project in a series of training labs. The team used The Things Network (TTN) to upload the data 
+                        from the board to the dashboard. Each packet included 13 vehicle ids, and the number of vehicles detected with each id.
+                        For example, sensing one car (vehicle id 0) would result in a packet like this: <br>
+                        {vehicle id 0: 1, vehicle id 1: 0, . . . vehicle id 12: 0}. <br>
+                        The diagram below demonstrates a successful transmission test of a LoRaWAN packet:
+                    </p>
+                </div>
+            </div>
+            <img src="files/image_lorawan_packet.png" alt="A successful LoRaWAN packet transmission test from the AdaFruit Feather M0 board." style="width: 100%;">
+        </div>
+        <div class="dropdowncontent" id="ACDCBuckConverter">
+            <h3>AC-DC Buck Converter</h3>
+            <p style="color:white">
+                North American power outlets provide 120V of power, which far exceeds the 5V needed for this device. 5V is necessary since this 
+                is standard for the Rasperry Pi being used. Therefore, the Digikey RS-15-5 converter fit the project's needs. The buck converter 
+                has live, neutral, and ground ports for connetion to the powerline through an AC power cord.
+            </p>
+        </div>
+        <div class="dropdowncontent" id="enclosure&switch">
+            <h3>Enclosure and Push Switch</h3>
+            <div class="text-row" style="width: 100%;height:30vh;position:absolute;">
+                <div style="width: 50%;height: 100%;display:flex;align-items: center;justify-content: center;">
+                    <p style="color:white;">
+                        The enclosure for the device was chosen to be a waterproof enclosure, since the community partner indicated that they would like 
+                        to use the device outdoors. This makes sense in order to capture traffic patterns on roads which are outdoors.
+                        The enclosure has a clear front panel, which allows the camera to see through it. The push switch 
+                        was chosen to be a waterproof push switch. It is connected in series with the line or 
+                        neutral inputs to the buck converter. A small hole was drilled in the enslosure so that the switch is accessible 
+                        from the outside of the box. 
+                    </p>
+                </div>
+                <img src="files/image_enclosure_pushSwitch.png" alt="The waterproof enclosure and push switch." style="width:50%;">
+            </div>
+         </div>
+        </div>
+
+
+    <div id="SeniorDesign_CV" class="subtabcontent">
+        <div class="flashing-image-container" style="height:60vh;">
+            <img src="files/image_cv_exmaple.png" alt="The object detection successfully identifies cars and busses."
+                style="animation-delay: 6s;opacity:0;">
+            <img src="files/image_cv_exmaple2.png" alt="The object detection successfully identifies cars and busses." 
+                style="animation-delay: 3s;opacity:0;">
+            <img src="files/image_cv_exmaple3.png" alt="The object detection successfully identifies cars and busses." 
+                style="width:100%;">
+        </div>
+        <h2>Overall Code Flow</h2>
+        <div style="padding:0;margin:0;width:95vw;overflow:hidden;">
+            <img src="files/image_cvCodeFlow.png" alt="The overall code flow for the object detection algorithm." style="width:100%;padding:0;margin:0;">
+        </div>
+        <div style="padding:0;;margin:2vw;width:88vw;overflow:hidden;">
+            <h2>Software Version Choices</h2>
+            <div class="resume-link" style="width:fit-content;">
+                <a href="https://github.com/ultralytics/ultralytics" target="_blank">Learn More About Ultralytics YOLO</a></div>
+            <p>When training the original object detection model, the team used the most updated version (Yolo v11). This would not run at all on 
+                the raspberry pi, so the team attempted to revert to an older version. Upon using the less computationally expensive Yolo v5, 
+                the dependencies were not compatable with current OpenCV commands. Therefore, the team used Yolo v8 to train the object detection model. 
+                Version 8 would run on the raspberry pi and was compatable with the OpenCV commands. 
+            </p>
+        </div>
+        <div style="background-color: black; width:80vw; height: 5vh;"></div>
+        <h2 style="background-color:white;margin-bottom:2px;width: 100%;">Raspberry Pi Compatability with OpenCV</h2>
+        <div class="text-row" style="background-color:white;overflow:hidden;">
+            <div class="left-column" style="width:50vw;border-right: 2px black solid;">
+                <p style="background-color:white;color:black;">
+                    OpenCV was used for analysing the images taken on the pi camera. However, the raspberry pi operating system used was Bookworm 
+                    (the most updated available Rasberry Pi OS). Bookworm uses a camera module called libcamera, while the older OS Bullseye 
+                    uses the Legacy Camera Module. OpenCV is compatable with the older raspberry pi OS Bullseye/ the Legacy Camera Module, 
+                    but not with the more recent OS Bookworm/ libcamera. The original code included the simple command "ret, frame = cap.read()" 
+                    or "cv2.videoCapture(camera_number)"to 
+                    capture a frame and feed the frame 
+                    variable into OpenCV functions. This command uses the legacy camera module.
+                    The solution to this incompatability was to create a function that would use libcamera to capture the frame and then convert 
+                    the libcamera frame into a format comaptable with OpenCV. The function created is shown below.
+                </p>
+                <div style="background-color: white; width:100%; height: 5vh;"></div>
+                <p style="background-color:white;color:black;">Additionally, a flag was put in this code incase future student groups in contact with Blueprint Geneva continue working on the device.
+                    For ease of use with any camera module, the flag "new_rasos" can be set to 1 (to use the new function) or 0 for use with the 
+                    Legacy Camera Module. If an older raspberry pi or another computing device instead of a pi is used, the code can still function.
+               </p>
+            </div>
+            <img src="files/image_getFrameFunc.png" alt="The code block used to make the libcamera photo compatable with OpenCV." style="width:47vw;padding:0;margin:0;">
+        </div>
+
+    </div>
+    <div id="SeniorDesign_LoRaWAN" class="subtabcontent">
+        
+    </div>
+
+    <div id="FastRobot_Overview" class="subtabcontent">
+        <div class="flashing-image-container" style="height:90vh">
+            <!-- <video class="video1" height="90%" autoplay loop muted>
+                <source src="files/videos/fastrobot_overview1.mp4">
+            </video> -->
+            <video class="video2" height="90%" autoplay loop muted>
+                <source src="files/videos/fastrobot_overview2.mp4">
+            </video>
+            <!-- <video class="video3" height="90%" autoplay loop muted>
+                <source src="files/videos/fastrobot_overview3.mp4">
+            </video> -->
+        </div>
+        <div style="position:relative;">
+            <h2>Project Overview</h2>
+            <p>
+                This project was made under professor guidance for a class titled "Fast Robots." These labs, unlike the other projects, are not group 
+                projects. The labs from this class have been included. 
+                The technical skills highlighted in this lab include: soldering skills and electronics integration (labs 3-4), PID implementation (labs 5-6), 
+                kalman filtering (lab 7), and localization (lab 9-11).
+            </p>
+        </div>
+    </div>
+    <div id="FastRobot_Lab1" class="subtabcontent">
+        <div style="background-color: black; margin: 10vh 100vw;"></div>
+        <h2 style="color:white;">Lab1</h2>
+        <h3>Prelab : Setup</h3>
+        <p>
+            It was necessary to first download the Arduino IDE (ver. 2.3.4) 
+            and Artemis Nano board extension. A virtual environment was also created for editing files in python and 
+            JupyterNotebook in order to send and recieve messages from the board with Bluetooth Low Energy (BLE). Then the Lab1A tasks 
+            and scripts were run to verify that the communication between devices worked without bluetooth and that the Artemis board was 
+            functioning properly. Then Lab 1B involved the virtual environment, which was used with more given and modified scripts focused on 
+            bluetooth use. Before working on lab tasks and working with the bluetooth, the MAC adress from the Artemis boad was: </p>
+        <img src="files/FastRobots/Lab1/mac_address.png">
+        <p>
+            The UUID (Universally Unique Identifier) was generated as well to avoid confusion with other boards in the room. The following block 
+            includes the input lines and output (ie the generated UID).
+        </p>
+        <img src="files/FastRobots/Lab1/UUID.png">
+        <h3>Prelab : Codebase</h3>
+        <p>
+            The connection between the Artemis and laptop was established using bluetooth. In a bluetooth 
+            connection, there is a peripheral device and central device (the peripheral device stores the services and the central device
+            views the services and gets data from the peripheral). The Artemis board is the peripheral device and the laptop is the central
+            device.
+        </p>
+        <div style="background-color: black; margin: 10vh 100vw;"></div>
+        <h3>Lab 1A Tasks</h3>
+        <div class="text-row">
+            <div class="left-column">
+                <h3 style="color:white">Configuration</h3>
+            </div>
+            <div class="right-column">
+                <p>The BAUD rate in all given example scripts and the serial montor was reset to 115200 so that the 
+                    computer could communicate with the board consistently for all scripts.</p>
+            </div>
+        </div>
+        <div class="text-row" style="background-color: white;">
+            <div class="left-column">
+                <h3>Task 1</h3>
+                <p style="color:black">Running the example script blink to make the LED blink was successful.</p>
+            </div>
+            <div class="right-column" style="display: flex; align-items: center; justify-content: center;">
+                <video height=300px controls>
+                    <source src="files/FastRobots/Lab1/blink.mp4">
+                </video>
+            </div>
+        </div>
+        <div class="text-row" style="background-color: orangered;">
+            <div class="left-column">
+                <h3 style="color:black">Task 2</h3>
+                <p style="color:white">Running the example script Example4_Serial to make the Serial Monitor echo inputs was successful.</p>
+            </div>
+            <div class="right-column" style="display: flex; align-items: center; justify-content: center;">
+                <video height=300px controls>
+                    <source src="files/FastRobots/Lab1/serial.mp4">
+                </video>
+            </div>
+        </div>
+        <div class="text-row">
+            <div class="left-column">
+                <h3 style="color:white;">Task 3</h3>
+                <p>Running the example script Example2_analogRead to make the Serial Monitor display the thermistor output
+                    was successful. The temperature reading goes from approx. 33600 to aprox. 33800 while being held to increase the temperature 
+                   with body heat.</p>
+            </div>
+            <div class="right-column" style="display: flex; align-items: center; justify-content: center;">
+                <video height=300px controls>
+                    <source src="files/FastRobots/Lab1/analog_therm.mp4">
+                </video>
+            </div>
+        </div>
+        <div class="text-row" style="background-color: white;">
+            <div class="left-column">
+                <h3>Task 4</h3>
+                <p style="color:black">Running the example script Example1_MicrophoneOutput was successful. The intent was to read the output of
+                    the microphone sensor (high numbers for loud sounds, low numbers when there is little/no microphone input or abmient sound). 
+                    The output increases from a few hundred to 21,000 after snapping in front of the board, demonstrating that this device works..</p>
+            </div>
+            <div class="right-column" style="display: flex; align-items: center; justify-content: center;">
+                <video height=300px controls>
+                    <source src="files/FastRobots/Lab1/sound.mp4">
+                </video>
+            </div>
+        </div>
+
+        <div style="background-color: black; margin: 10vh 100vw;"></div>
+
+        <h3>Lab 1B Tasks</h3>
+        
+        
+    </div>
+    
+    <div id="MakeAThon" class="tabcontent">
+        <!-- Add scrolling photo bar -->
+        <!-- Project Overview -->
+    </div>
+
+
+    <script src="js/portfolio_scripts.js"></script>
+</body>
+</html>
