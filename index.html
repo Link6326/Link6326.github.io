@@ -103,9 +103,11 @@
     
     <div id="SeniorDesign_Overview" class="subtabcontent">
         <!-- title  -->
-        <div style="background-color: black; margin: 10vh 100vw;"></div>
-        <h2 style="color:white;font-size: 30px;">Cornell University Senior Design Project</h2>
+        <div style="background-color: black; margin: 10vh 98vw;"></div>
+        <div style="background-color: black; width:98vw;">
+            <h2 style="color:white;font-size: 30px;">Cornell University Senior Design Project</h2>
         <h2 style="padding:0.5% 0;">Traffic Tracking Using Object Detection</h2>
+        </div>
         <!-- Add scrolling photo bar -->
          <!-- <div class="static-image-container">
          <div class="image-container" style="height: 50vh;animation-duration: 35s;">
@@ -121,7 +123,7 @@
         </div> -->
         <!-- Project Overview -->
         <div class="text-image-background">
-            <div class="color-image-background">
+            <div class="color-image-background" style="width:98vw;">
                 <img class="background-image" src="files/image_background_SrDesignScematic.png">
                 <h2 style="color:black;font-size: 40px;position: absolute; top: 10%;"> Project Overview and Purpose</h2>
                 <p style="color:black;position: absolute; top: 25%;width: 50%;">
@@ -138,7 +140,7 @@
             </div>
         </div>
         <h2 style="padding:1% 0;position: relative;text-align: center;">Quantitative Goals</h2>
-        <div style="background-color: orangered;height: 0.5vh; width: 100vw;"></div>
+        <div style="background-color: orangered;height: 0.5vh; width: 98vw;"></div>
         <div style="height:20vh" class="text-row">
             <div class="stat-block" style ="width:32vw;">
                 <p>The device detects</p>
@@ -374,7 +376,7 @@
     </div>
 
     <div id="FastRobot_Overview" class="subtabcontent">
-        <div class="flashing-image-container" style="height:90vh">
+        <div class="flashing-image-container" style="height:90vh; width:98vw;overflow:hidden;">
             <!-- <video class="video1" height="90%" autoplay loop muted>
                 <source src="files/videos/fastrobot_overview1.mp4">
             </video> -->
@@ -385,12 +387,13 @@
                 <source src="files/videos/fastrobot_overview3.mp4">
             </video> -->
         </div>
-        <div style="position:relative;">
+        <div style="position:relative; width:98vw;">
             <h2>Project Overview</h2>
             <p>
                 This project was made under professor guidance for a class titled "Fast Robots." These labs, unlike the other projects, are not group 
-                projects. The labs from this class have been included. 
-                The technical skills highlighted in this lab include: soldering skills and electronics integration (labs 3-4), PID implementation (labs 5-6), 
+                projects. The labs from this class have been included. This is the most dense project description in the portfolio, so the 
+                highlights and skills are outlined here in order to point out relevant sections to any given user. 
+                The technical skills highlighted in this lab include: soldering skills and electronics integration (labs 2-4), PID implementation (labs 5-6), 
                 kalman filtering (lab 7), and localization (lab 9-11).
             </p>
         </div>
@@ -482,8 +485,309 @@
         <div style="background-color: black; margin: 10vh 100vw;"></div>
 
         <h3>Lab 1B Tasks</h3>
+        <div class="text-row" style="background-color: orangered; width:98vw;">
+            <div class="left-column">
+                <h3 style="color:black">Configuration</h3>
+            </div>
+            <div class="right-column" style="width:65vw;">
+                <p style="color:white">Lab 1B focused on implementing several functions allowing bluetooth communication between the computer 
+                    and artemis board. The commands implemented are detailed below. The BAUD rate in all given example scripts and the serial montor was reset to 115200 so that the 
+                    computer could communicate with the board consistently for all scripts. Furthermore, the MAC address and the UUID generated 
+                    in the prelab were used and entered into their respective variables were necessary (the configuration.yaml file and in 
+                    the ble_arduino.ino file).</p>
+            </div>
+        </div>
+        <div class="text-row">
+            <div class="left-column">
+                <h3 style="color:white;">Task 1</h3>
+                <p>This task was to use and create the ECHO command. Much of the outline was already created, 
+                    so printing the given message "Robot says -> __input__ :)" required creating a print statement with that message. 
+                    The code for the echo command and output are ultimately:</p>
+            </div>
+            <div class="right-column" style="display: flex; align-items: center; justify-content: center;flex-direction: column;">
+                <img src="files/FastRobots/Lab1/ECHO_code.png" style="width:65vw;">
+                <img src="files/FastRobots/Lab1/ECHO_output.png" style="width:65vw;">
+            </div>
+        </div>
+        <div class="text-row" style="background-color: white;">
+            <div class="left-column">
+                <h3>Task 2</h3>
+                <p style="color:black">This task was intended to create and use the SEND_THREE_FLOATS function. This function is 
+                    intended to take 3 float inputs and extract those values in the Arduino sketch/ display them in the Serial 
+                    Monitor. The code and result for the SEND_THREE_FLOATS command implemented was:</p>
+            </div>
+            <div class="right-column" style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                <img src="files/FastRobots/Lab1/THREEFLOATS_code.png" style="width:65vw;">
+                <img src="files/FastRobots/Lab1/THREEFLOATS_output.png" style="width:65vw;">
+            </div>
+        </div>
+        <div class="text-row" style="background-color: orangered;">
+            <div class="left-column">
+                <h3 style="color:black">Task 3</h3>
+                <p style="color:white">The purpose of this task was to create the GET_TIME_MILLIS command. Unlike the previous 
+                    2 tasks, this command did not already have skeleton code throughout the ble_arduino.ino and cmd_types.py file. 
+                    The code implemented in ble_arduino.ino is shown in the topmost figure, followed by the time printed in the arduino 
+                    serial monitor. The goal, however, was to send the time from the arduino to the computer over bluetooth. Therefore, the 
+                    time output is also attached in the final figure.
+                </p>
+            </div>
+            <div class="right-column" style="display: flex; align-items: center; justify-content: center;flex-direction: column;">
+                <!-- Add right column  -->
+                 <img src="files/FastRobots/Lab1/TIME_code.png" style="width:65vw;">
+                 <img src="files/FastRobots/Lab1/TIME_output.png" style="width:65vw;">
+                 <img src="files/FastRobots/Lab1/TIME_output2.png" style="width:65vw;">
+            </div>
+        </div>
+        <div class="text-row">
+            <div class="left-column">
+                <h3 style="color:white;">Task 4</h3>
+                <p>This task involved setting up a notification handler in python in the Jupyer Notebook. JUST the time portion 
+                    of the string needs to be extracted. The code involved and output were:</p>
+            </div>
+            <div class="right-column" style="display: flex; align-items: center; justify-content: center;flex-direction: column;">
+                <img src="files/FastRobots/Lab1/NOTIFICATION_code.png" style="width:65vw;">
+                <img src="files/FastRobots/Lab1/NOTIFICATION_output.png" style="width:65vw;">
+            </div>
+        </div>
+        <div class="text-row" style="background-color: white;">
+            <div class="left-column">
+                <h3>Task 5</h3>
+                <p style="color:black">To determine how fast messages can be sent, a loop was created that would act over 5 seconds. The number of messages would be divided 
+                    by 5 seconds for the final messages/second speed. The loop TIME_MESSAGE_LOOP was created the same way that the GET_TIME_MILLIS command was created 
+                    (equal to 7 instead of 6 in cmd_types.py). The code for the loop is shown. The result was that 
+                    the total number of messages printed by the serial monitor was 175. This means that (N=175)/5 messages were sent per second, 
+                    which is 
+                    equal to 35 messages/second.</p>
+            </div>
+            <div class="right-column" style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                <img src="files/FastRobots/Lab1/TIME_LOOP_code.png" style="width:65vw;">
+            </div>
+        </div>
+        <div class="text-row" style="background-color: orangered;">
+            <div class="left-column">
+                <h3 style="color:black">Task 6</h3>
+                <p style="color:white">In Task 5, the goal was to see how fast messages could be sent. A new strategy was attempted to make the messages 
+                    faster in Task 6 in a new command SEND_TIME_DATA. All of the timestamps were generated and stored in an array "time_arr", and the messages in the 
+                    array were sent afterwards. 
+                    To calculate the speed of time stamps using this method of generation, the array size was pre-set to 10000 messages. Then the final time message value - the 
+                    first time message value was used for delta t (change in time). Then the number of messages (10000)/ delta t gave the message rate per second. 
+                    The code for the SEND_TIME_DATA section is as shown in the topmost figure in this section. After running SEND_TIME_DATA, the total time elapsed was 265 milliseconds. 10000 / 0.265 = 37735 time stamps generated per minute. 
+                    This demonstrates that it is much more efficient to generate many messages, time stamps, or calculations as possible before sending messages, 
+                    which takes longer.  Although it is not reasonable to display all 10000 messages, the lines of code used to run the command SEND_TIME_DATA and the first 
+                    few results are shown in the second figure.
+                </p>
+            </div>
+            <div class="right-column" style="display: flex; align-items: center; justify-content: center;flex-direction: column;">
+                 <img src="files/FastRobots/Lab1/TIME_DATA_code.png" style="width:65vw;">
+                 <img src="files/FastRobots/Lab1/TIME_DATA_output.png" style="width:65vw;">
+            </div>
+        </div>
+        <div class="text-row">
+            <div class="left-column">
+                <h3 style="color:white;">Task 7</h3>
+                <p>This task focused on using the same message strategy as Task 6, but for temperature data. All of the temperature readings 
+                    were to be gathered first before sending the temperature data array. Each timestamp recorded in "time_arr" corresponds to the same index 
+                    of "temp_arr". The format for time data is already "T:_time_", therefore the decided upon string to send time and temperature data was "T:_time_-C:_temperature_".
+                    In otherwords, T preceeds the time, C preceeds the temperature in celcius, and a dash "-" separates the time and temperature.
+                    The new command GET_TEMP_READINGS is used to collect this data and then loop through the arrays and send the data back. Furthermore, 
+                    it did not make sense to have all of the temperature readings from less than a second for delta t; these measurements would be too similar. Therefore, a 
+                    time delay was also added. The code to collect this data and add this time delay in GET_TEMP_READINGS is the topmost figure. 
+                    The notification handler also had to be updated to handle the time AND temperature readings. It both still prints the data (specifying 
+                    between time and temperature readings) and adds the time and temperature data into two respective lists. The updated notification handler code is the second 
+                    figure. It is not feasible to share all of the temperature outputs due to the volume of them. The first few readings of the 
+                    output of the code after using the GET_TEMP_READINGS command are in the third/ bottom figure. 
+                </p>
+            </div>
+            <div class="right-column" style="display: flex; align-items: center; justify-content: center;flex-direction: column;">
+                <img src="files/FastRobots/Lab1/TEMP_READINGS_code.png" style="width:65vw;">
+                <img src="files/FastRobots/Lab1/TEMP_READINGS_code2.png" style="width:65vw;">
+                <img src="files/FastRobots/Lab1/TEMP_READINGS_output.png" style="width:65vw;">
+            </div>
+        </div>
+        <div class="text-row" style="background-color: white;">
+            <div class="left-column">
+                <h3>Task 8</h3>
+            </div>
+            <div class="right-column" style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                <p style="color:black">The advantage of sending data as it is aquired (NOT first put into an array) is that the data aquired is as relevant as possible to
+                    when it is being recieved. Storing all of the measurements in an array first makes so that time has passed before recieving the data, and only 
+                    the last measurements are likely going to be necessary. For times when computations need to be made in real time based on the current state of the board 
+                    or robot it is attached to, it would be wise NOT to store lots of data in an array before sending it. The second method has the advantage of collecting 
+                    more data per time period. According to the calculations in Task 6, 37735 time stamps were generated per minute suing this method. This is much greater than 
+                    the 35 messages per minute sent in Task 5.
+                    This increased time density and rate of transfer could be useful for complicated maneuvers. It would also be useful for 
+                    controllers such as a PID where past data or 
+                    analysis of trends is relevant. Another concern with the array method, however, is that the current lab 1 script already takes up 28% of the memory on the board. This 
+                    lab is introductory, and not nearly as complicated as an actual robot would be. Therefore, it is important to consider that if this method is used, 
+                    the memory constraints of the board are important. This concern can be mitigated by sending less of each kind of data (measurements over less time at 
+                    the increased time density OR adding an artificial delay to decrease the measurements over the same period of time). To be exact in these memory calculations, 
+                    the board has 384 kB of RAM. The floats for the time and temperature take up 4 bytes each. 384kB / 4 bytes = 96,000  floats that can be sent. These can 
+                    be divided among different measurements (ie time or temperature), and also must be regulated by the aforementioned number of measurements over time.</p>
+            </div>
+        </div>
+
+        <div style="background-color: black; margin: 10vh 100vw;"></div>
+
+        <h2>Discussions and Conclusion</h2>
+        <div style="width:98vw;">
+            <p>
+                One of the primary lessons involved in this lab was how to use bluetooth with the Artemis Nano at all. Another lesson the lab 
+            focuses on which device sends data and when. Since the central device in a bluetooth connection recieves the data when relevant and the 
+            peripheral device sends the data, it made sense through these activities that the Artemis was the peripheral deivce. It sent the time and 
+            temperature data. Furthermore, it introduced the nuances of how to use the bluetooth. The robots throughout the course are intended to be very fast, 
+            hence the name "Fast Robots", so it will be important to know how to send data as quickly and efficiently as possible from the Artemis board and any relevant sensors.
+            </p>
+        </div>
         
-        
+    </div>
+    <div id="FastRobot_Lab2" class="subtabcontent">
+        <div style="background-color: black; margin: 10vh 98vw;"></div>
+        <div style="width:98vw;">
+            <h2 style="color:white;">Lab 2</h2>
+            <p>The purpose of this lab is to set up the IMU and test that it works (also implementing any equations related to make it work).
+                The three sections of this lab are: Setting up the IMU (plugging it in and testing an example script), using the IMU 
+                accelerometer, and using the IMU gyroscope.
+            </p>
+        </div>
+
+        <div style="background-color: black; margin: 10vh 98vw;"></div>
+        <div style="width:98vw;">
+            <h3>General IMU Setup</h3>
+            <p style="color: white;">
+                The IMU was plugged in and the example code was run. In the example code, the AD0_VAL was also set to 1. This is the last bit of the I2C address, 
+                which is dependent on if the 
+                ADR jumper is closed (in this case it is closed). When testing the outputs of the values in the demo script, the gyroscope was 0
+                when the IMU is stationary and increases as the velocity of the IMU increases. The accelerometer shows the acceleration in each 
+                direction. The main board also blinks when the lab 2 script starts.
+            </p>
+        </div>
+        <div class="text-row" style="width:98vw;">
+            <img src="files/FastRobots/Lab2/IMU.jpg" style="height:70vh;">
+            <img src="files/FastRobots/Lab2/ExampleCode.png" style="height:70vh;"> 
+        </div>
+        <div style="background-color: black; margin: 10vh 98vw;"></div>
+        <h3>Accelerometer</h3>
+        <p style="color:white;">
+            The first step was to implement equations that would use accelerometer data to output an angle in degrees.
+        </p>
+        <div class="text-row">
+            <img src="files/FastRobots/Lab2/AccelerometerEquations.png" style="width: 70%;">
+        </div>
+        <div style="background-color: black; margin: 5vh 98vw;"></div>
+        <p>
+            The accelerometer in the IMU using these equations was then tested. The input (manually twisting the IMU) vs the output of 
+            the equations is shown below.
+        </p>
+        <div class="text-row"style="background-color:white;margin-bottom:0.5vh">
+            <div class="left-column" style="width:50%;">
+                <h2 style="color:orangered">Input</h2>
+            </div>
+            <div class="right-column" style="width:50%">
+                <h2 style="color:orangered">Output</h2>
+            </div>
+        </div>
+        <div class="text-row"style="background-color:white;margin-bottom:0.5vh">
+            <div class="left-column" style="width:50%">
+                <p style="color:black">Manual pitch of {-90,0,90}</p>
+            </div>
+            <div class="right-column" style="width:50%">
+                <p style="color:black">
+                    Pitch is:-82.01 <br>
+                    Roll is:9.53 <br>
+                    <br>
+                    Pitch is:0.32 <br>
+                    Roll is:-1.31 <br>
+                    <br>
+                    Pitch is:84.97 <br>
+                    Roll is:16.03 <br>
+                </p>
+            </div>
+        </div>
+        <div class="text-row"style="background-color:white">
+            <div class="left-column" style="width:50%">
+                <p style="color:black">Manual roll of {-90,0,90}</p>
+            </div>
+            <div class="right-column" style="width:50%">
+                <p style="color:black">
+                    Pitch is:-1.17 <br>
+                    Roll is:-84.60 <br>
+                    <br>
+                    Pitch is:0.32 <br>
+                    Roll is:-1.31  <br>
+                    <br>
+                    Pitch is:4.40 <br>
+                    Roll is:86.27 <br>
+                </p>
+            </div>
+        </div>
+        <p style="color:white">The accelerometer is about 2 to 10 degrees off. Additionally, there is an immediate spike in huge error as 
+            soon as the IMU turns, but after a few seconds it returns to values close to the expected value. This is fine for the use case of 
+            this current lab, but may be a problem when the IMU is on the car since it should be moving fast, which would mean it is not held 
+            still very long in this use case. This would make the readings very innacurate on the robot. </p>
+        <div style="background-color: black; margin: 5vh 98vw;"></div>
+        <p style="color:white">Additionally, to analyse the noise, the following FFT was performed for both pitch and roll while the IMU was still: </p>
+        <img src="files/FastRobots/Lab2/AccelerometerNoiseStill.png", width="400">
+        <img src="files/FastRobots/Lab2/AccelerometerFFTStill.png", width="400">
+        <div style="background-color: black; margin: 5vh 98vw;"></div>
+        <p style="color:white">Then, the following FFT was performed for both pitch and roll while the IMU was rotated: </p> 
+        <img src="files/FastRobots/Lab2/AccelerometerNoiseRotated.png", width="400">
+        <img src="files/FastRobots/Lab2/AccelerometerFFTRotated.png", width="400">
+        <p style="color:white">The only significant spike is up tp approximately 7 Hz, while the rest of the FFT appeared not to have 
+            significant problems. The cutoff filter is then at 7 Hz. The data rate was aquired by using the number of messages sent 
+            divided by the change in time, which is approximately 333 messages/second. The low pass filter code and results are attached below: </p>
+            <img src="files/FastRobots/Lab2/LPFCode1.png">
+            <img src="files/FastRobots/Lab2/LPFCode2.png">
+            <div></div>
+            <img src="files/FastRobots/Lab2/LPFResultsRaw.png", width="400">
+            <img src="files/FastRobots/Lab2/LPFResultsFiltered.png", width="400">
+            <div style="background-color: black; margin: 5vh 98vw;"></div>
+            <p style="color:white">It can be clearly seen that the LPF decreases the noise significantly in these results. </p>
+
+            <div style="background-color: black; margin: 5vh 98vw;"></div>
+            <h3>Gyroscope</h3>
+            <p style="color:white">The equations used for the gyroscope were: </p>
+            <img src="files/FastRobots/Lab2/GyroscopeEquations.png">
+            <div style="background-color: black; margin: 5vh 98vw;"></div>
+            <p style="color:white">The following graph was obtained while keeping the pitch, roll, and yaw still over 15 seconds. 
+                The error clearly grows very quickly since after being held still for these 15 seconds, the error is already between 5 and 10 degrees.
+                When the sampling frequency was decreased, the accuracy increased. There were fewer measurements that were slightly off to 
+                be added to the overall accumulated error. Despite this, there is also less noise in the gyroscope than the accelerometer. </p>
+            <img src="files/FastRobots/Lab2/GyroscopeData1.png", width="400">
+            <div style="background-color: black; margin: 5vh 98vw;"></div>
+            <p style="color:white">The complementary filter was then added to sombine the accelerometer and gyroscope measurements. The alpha value 
+                was set to 0.1 (the weight of the gyroscope). This value made the graphs most accurate when still after experimentation with multiple values. 
+                The graph in this configuration is shown below, as well as the equation used for the filter: </p>
+            <img src="files/FastRobots/Lab2/ComplementaryFilterEquation.png">
+            <p style="color:white">  </p>
+            <img src="files/FastRobots/Lab2/GyroscopeData2.png", width="400">
+            <div style="background-color: black; margin: 5vh 98vw;"></div>
+
+            <h3>Sample Data</h3>
+            <p style="color:white">After removing all print statements and delays and sending all data over bluetooth, the message rate was 333.3 
+                messages/second. Additionally, I used separate arrays for storage of different kinds of data. It would not take any less 
+                storage space if all of the data was in one array, and variable names make it easier to access information. Furthermore, it makes 
+                it easier to write functions for proccessing data, such as the low pass filter funciton, that can be applied to an entire 
+                array at the same time as long as the necessary data to process is in its own array. This also means if only some of the data 
+                is relevant, not all of it must be sent. For example, just the comp filter data can be sent and not the raw accelerometer 
+                data if these intermediary values are not used. Floats were used for the comp data since there are computations that result in decimals 
+                that need to be transferred. The floats are 4B, which is the same size as an int. Since there is no reason to sacrifice the capabilities 
+                of a float without saving any data use, no ints were used. The total memory size is 384 kB, so in order to send LPF accelerometer data, 
+                gyroscope data, comp data, and time data, 384kB/16B = 24567 measurements that can be sent. Using the 333.3 messages per second measured 
+                earlier, 73.7 seconds worth of data can be sent. The code used to send the messages for these calculations was:</p>
+            <img src="files/FastRobots/Lab2/SampleDataCode.png">
+            <p style="color:white">Graphing this code results in the plot used for the complementary filter above. </p>
+            <div style="background-color: black; margin: 5vh 98vw;"></div>
+
+            <h3>Stunt</h3>
+            <p style="color:white">The robot was driven in a hallway. The car does not drive perfectly straight, as seen in the video 
+                below. Some steering compensation may have to be done for this in later use of the robot. </p>
+            <video width="320" height="240" controls>
+                <source src="files/FastRobots/Lab2/Stunt.mp4" type="video/mp4"> </video>
+
+
+        </div>
+
+    
     </div>
     
     <div id="MakeAThon" class="tabcontent">
