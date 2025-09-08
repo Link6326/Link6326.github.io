@@ -22,7 +22,7 @@
                 <button class="sublinks" onclick="openSubTab(event, 'SeniorDesign_Overview')" id="defaultOpenSeniorDesign">Project Overview</button>
                 <button class="sublinks" onclick="openSubTab(event, 'SeniorDesign_Hardware&Electronics')">Hardware and Electronics</button>
                 <button class="sublinks" onclick="openSubTab(event, 'SeniorDesign_CV')">Object Detection Implementation</button>
-                <button class="sublinks" onclick="openSubTab(event, 'SeniorDesign_LoRaWAN')">LoRaWAN Data Transmission</button>
+                <!-- <button class="sublinks" onclick="openSubTab(event, 'SeniorDesign_LoRaWAN')">LoRaWAN Data Transmission</button> -->
             </tab>
         </div>
         <div class="tab-set">
@@ -32,20 +32,20 @@
                 <button class="sublinks" onclick="openSubTab(event, 'FastRobot_Lab1')">Lab 1</button>
                 <button class="sublinks" onclick="openSubTab(event, 'FastRobot_Lab2')">Lab 2</button>
                 <button class="sublinks" onclick="openSubTab(event, 'FastRobot_Lab3')">Lab 3</button>
-                <button class="sublinks" onclick="openSubTab(event, 'RastRobot_Lab4')">Lab 4</button>
+                <button class="sublinks" onclick="openSubTab(event, 'FastRobot_Lab4')">Lab 4</button>
                 <button class="sublinks" onclick="openSubTab(event, 'FastRobot_Lab5')">Lab 5</button>
                 <button class="sublinks" onclick="openSubTab(event, 'FastRobot_Lab6')">Lab 6</button>
                 <button class="sublinks" onclick="openSubTab(event, 'FastRobot_Lab7')">Lab 7</button>
-                <button class="sublinks" onclick="openSubTab(event, 'RastRobot_Lab8')">Lab 8</button>
+                <button class="sublinks" onclick="openSubTab(event, 'FastRobot_Lab8')">Lab 8</button>
                 <button class="sublinks" onclick="openSubTab(event, 'FastRobot_Lab9')">Lab 9</button>
-                <button class="sublinks" onclick="openSubTab(event, 'RastRobot_Lab10')">Lab 10</button>
+                <button class="sublinks" onclick="openSubTab(event, 'FastRobot_Lab10')">Lab 10</button>
                 <button class="sublinks" onclick="openSubTab(event, 'FastRobot_Lab11')">Lab 11</button>
         </div>
         <div class="tab-set">
             <button class="tablinks" onclick="openTab(event, 'MakeAThon')">Big Red Make-A-Thon</button>
-            <tab class="subtab" id="subtab3">
+            <!-- <tab class="subtab" id="subtab3">
                 <button class="sublinks" onclick="openSubTab(event, 'MakeAThon_Overview')" id="defaultOpenMakeAThon">Project Overview</button>
-                <button class="sublinks" onclick="openSubTab(event, 'MakeAThon_Tools')">PLACEHOLDER</button>
+                <button class="sublinks" onclick="openSubTab(event, 'MakeAThon_Tools')">PLACEHOLDER</button> -->
         </div>
     </tab>
 
@@ -122,7 +122,7 @@
         </div>
         </div> -->
         <!-- Project Overview -->
-        <div class="text-image-background">
+        <div class="text-image-background" style="overflow:auto;background-color: white;">
             <div class="color-image-background" style="width:98vw;">
                 <img class="background-image" src="files/image_background_SrDesignScematic.png">
                 <h2 style="color:black;font-size: 40px;position: absolute; top: 10%;"> Project Overview and Purpose</h2>
@@ -159,6 +159,16 @@
                 <h2 style="width:33vw;">8</h2>
                 <div class="resume-link" style="width:fit-content;margin-left: auto; margin-right: auto;">
                     <a href="https://github.com/ultralytics/ultralytics" target="_blank">Learn More About Ultralytics YOLO</a></div>
+            </div>
+        </div>
+        <div class="static-image-container">
+            <div class="image-container" style="display:flex;flex-direction:row;height:70vh;animation-duration: 30s;">
+                <img src="files/image_srdesign_RealDeviceAngle.png" alt="A photo of the final device from an angled view.">
+                <img src="files/image_cycle2_seniorDesignReal.png" alt="A photo of the final device from a head on view.">
+                <img src="files/image_cycle2_seniorDesignSchematic.png" alt="A photo of a schematic of the device.">
+                <img src="files/image_srdesign_RealDeviceAngle.png" alt="A photo of the final device from an angled view.">
+                <img src="files/image_cycle2_seniorDesignReal.png" alt="A photo of the final device from a head on view.">
+                <img src="files/image_cycle2_seniorDesignSchematic.png" alt="A photo of a schematic of the device.">
             </div>
         </div>
     </div>
@@ -250,7 +260,7 @@
         </div>
         <div class="dropdowncontent" id="camera&lens">
             <h3>Arducam Camera and Lens</h3>
-            <div class="text-image-background" style="width:100vw;height:15vh;">
+            <div class="text-image-background" style="width:100vw;height:40h;">
                 <div class="color-image-background" style="width: 100%;
                 height: fit-content;
                 position: relative;
@@ -266,9 +276,9 @@
                         can only be seen while the device is attached to a computer monitor, which means initial setup will require a 
                         computer monitor onsite. This is an inconvenient and awkward setup, but this is only required for the first use.
                     </p>
-                </div>
-                
+                </div>     
         </div>
+
         </div>
         <div class="dropdowncontent" id="featherM0Board">
             <h3>AdaFruit Feather M0 Board with LoRaWAN</h3>
@@ -305,9 +315,11 @@
             </p>
         </div>
         <div class="dropdowncontent" id="enclosure&switch">
-            <h3>Enclosure and Push Switch</h3>
-            <div class="text-row" style="width: 100%;height:30vh;position:absolute;">
-                <div style="width: 50%;height: 100%;display:flex;align-items: center;justify-content: center;">
+            <div style="width:100vw; height:10vh;">
+                <h3>Enclosure and Push Switch</h3>
+            </div>
+            <div class="text-row">
+                <div class="left-column" style="width: 50%;height: 100%;display:flex;align-items: center;justify-content: center;overflow:auto;">
                     <p style="color:white;">
                         The enclosure for the device was chosen to be a waterproof enclosure, since the community partner indicated that they would like 
                         to use the device outdoors. This makes sense in order to capture traffic patterns on roads which are outdoors.
@@ -317,7 +329,7 @@
                         from the outside of the box. 
                     </p>
                 </div>
-                <img src="files/image_enclosure_pushSwitch.png" alt="The waterproof enclosure and push switch." style="width:50%;">
+                    <img src="files/image_enclosure_pushSwitch.png" alt="The waterproof enclosure and push switch." style="width:50%;">
             </div>
          </div>
         </div>
@@ -371,9 +383,9 @@
         </div>
 
     </div>
-    <div id="SeniorDesign_LoRaWAN" class="subtabcontent">
+    <!-- <div id="SeniorDesign_LoRaWAN" class="subtabcontent">
         
-    </div>
+    </div> -->
 
     <div id="FastRobot_Overview" class="subtabcontent">
         <div class="flashing-image-container" style="height:90vh; width:98vw;overflow:hidden;">
@@ -972,14 +984,553 @@
             </div>
 
     </div>
+    <div id="FastRobot_Lab4" class="subtabcontent">
+        <div class="space"></div>
+        <h2 style="color:white">Lab 4</h2>
+        <p>This lab was focused on soldering the motors from the robot, motor drivers, and battery, to the artemis board. Individual sensors 
+            could still be unplugged from the QWIIC breakout board.
+        </p>
+        <div class="space"></div>
+
+        <div style="background-color: white;">
+            <h3>Wiring Diagram</h3>
+            <img src="files/FastRobots/Lab4/WiringDiagram.png" style="width:70%">
+            <p style="color:black">
+                The two motor drivers were added to the motors and artemis set up in this lab. The intended connections for the motor 
+            drivers are shown below. Pins A3, 4, A5, and 6 were chosen since they all support PWM. The batteries for the motor driver are also separate 
+            from the batteries for the main board. The motor drivers benefit from having more power (850mAh battery), while the artemis has no use for 
+            the extra power (it uses a 650mAh battery).
+            </p>
+        </div>
+        <div class="space"></div>
+
+        <h3>Power Generator and Oscilliscope</h3>
+        <p style="color:white">The power supply was set to 3.7 V since this matches the battery real battery to be used with the drivers. 
+            The following code was used to test the drivers with the oscilliscope: </p>
+        <img src="files/FastRobots/Lab4/OscilliscopeCode.png", style="height:40vh;">
+        <p style="color:white">The Oscilliscope showed a square wave. However, sometimes the level of noise was quite high and at other times the 
+            square wave appeared not to have much noise at all. Two results are shown from the oscilliscope. The first has a lower delay than the 
+            second, showing the control over the outputs. The second square wave preidctably has wider rectangles / spaces between rectangles. </p>
+        <img src="files/FastRobots/Lab4/Oscilliscope1.jpg", width="400">
+        <img src="files/FastRobots/Lab4/Oscilliscope2.jpg", width="400">
+
+        <p style="color:white">The motor drivers were then connected to the motors. The functioning motors are shown here, as well as the 
+            oscilliscope and power supply still being attached on the table behing the car (on the side that did not have the moving motors to 
+            interfere with the motors). The power in is attached to the wire connected to VIN on the motor driver, and the ground of the power supply 
+            to GND of the motor driver. </p>
+        <video width="320" height="240" controls>
+            <source src="files/FastRobots/Lab4/FirstSideBidirectionalSpin.mp4" type="video/mp4"> </video>
+        
+        <h3>Motors With Attached Battery</h3>
+        <p style="color:white">The motors drivers were then attached to the 850 mAh battery. The code used to 
+            test the motors is shown below, as well as a video of all of the wheels spinning. </p>  
+        <img src="files/FastRobots/Lab4/TwoWheels.png", width="400">
+        <video width="320" height="240" controls>
+            <source src="files/FastRobots/Lab4/AllWheelsSpin.mp4" type="video/mp4"> </video>
+        
+        <p style="color:white">The wiring in the actual car with all components is: </p>
+        <img src="files/FastRobots/Lab4/CarWiring.png", width="800">
+
+        <h3>Lower PWM Value</h3>
+        <p style="color:white">The PWM value was tested using the same code as above while lowering the PWM value from 100 until the 
+            motor no longer would turn. The minimum PWM value was 33 (since 255 is the maximum, this is 13% of the maximum value). 
+            In order to turn, it was 78 (30.5% of the total value available). </p>
+
+        <h3>Motor Calibration</h3>
+        <p style="color:white">The motors were calibrated by attempting to go in a straight line for at least 6 feet. In this testing, the tile lines 
+            are used to determine a straight line. The first video shows the motors with even power. the robot goes about 6 feet along the straight 
+            tile line, (6 tiles), but it soon veers off. Therefore, a calibration factor was added such that the left wheels have a pwm value that is 1.2 times 
+            more than that sent to the right motors. In the second video, the robot clearly goes much farther without veering off of the line. The 
+            code is the same as the one used for all previous steps with two motors working, except the value for the left motor (pins A3 and 4) 
+            is multiplied by 1.2.</p>
+        <img src="files/FastRobots/Lab4/CalibrationCode.png", width="400">`
+        <video width="320" height="240" controls>
+            <source src="files/FastRobots/Lab4/Calibration1.mp4" type="video/mp4"> </video>
+        <video width="320" height="240" controls>
+            <source src="files/FastRobots/Lab4/Calibration2.mp4" type="video/mp4"> </video>
+
+        <h3>Open Loop Control</h3>
+        <p style="color:white">The robot was then tested with open loop control. The robot was set to go straight, then turn approximately 180 degrees, 
+            then go straight again. The code used for this is shown below, as well as a video of the robot completing theese moves. Time based guesses 
+            for open loop control made programming the path somewhat more difficult. It can be seen that the 180 degree turn was still somewhat inaccurate 
+            since the turns were particularly inconsistent based on time period inputs/ delays in the code. </p>
+        <img src="files/FastRobots/Lab4/OpenLoopCode.png", width="400">
+        <video width="320" height="240" controls>
+            <source src="files/FastRobots/Lab4/OpenLoopControl.mp4" type="video/mp4"> </video>
+
+    </div>
+    <div id="FastRobot_Lab5" class="subtabcontent">
+        <div class="space"></div>
+        <h2 style="color:white">Lab 5</h2>
+        <p>This lab was focused on implementing a linear PID (moving towards a wall and stopping at a set distance away). Most of the lab details are 
+            experimenting with tuning parameters. 
+        </p>
+        <div class="space"></div>
+
+        <h2>Prelab</h2>
+        <h3>Bluetooth Setup</h3>
+        <p style="color:white">A bluetooth command  PID_CONTROL was added that collects 10 seconds of data while using a PID to drive towards 
+            the wall. The four inputs into the function are the ki,kd,kp, and sp values. There are also defualt values for all of these inputs 
+            (0 ki,kd,kp and 2 ft = 609.6 mm for sp). This way, the robot will not move without proper inputs, and the default distance 
+            from the wall is 2 feet. This distance was chosen instead of the goal value of 1 foot so that during testing, the robot was 
+            less likely to run into the wall. This code is shown below: </p>
+        <img src="files/FastRobots/Lab5/PIDControlCode.png">
+        <p style="color:white">The notification handler was also updated to handle the PID_CONTROL command. The code for this is shown below: </p>
+        <img src="files/FastRobots/Lab5/PIDControlCode2.png">
+        <p style="color:white">The motors also turn off after the 10 second loop so that the robot is less liekly to run away into a wall. A 
+            separate command PID_SEND sends the time, tof distance, linear interpolation, error, and u values. This is because the data takes a long time
+            to send, and so if a set of gains is particularly bad the data doesnt have to be sent. </p>
+
+        <h2>Lab Tasks</h2>
+        <h3>PID Setup</h3>
+        <p style="color:white">A PID controller was used. The ki term eliminates steady state error, but the ki term also
+            introduces overshoot. The kd term solves the overshoot problem introduced by tht ki term. Therefore, this addresses the most problems 
+            that could arise with the controller. </p>
+        <h3>Range and Sampling Time</h3>
+        <p style = "color:white">The sampling time for all data was calculated by first sending time, distance (tof), linear distance interpolation, 
+            error, and u values. Then the time was used for the overall frequency by taking the total number of messages (length of the sent array) 
+            and dividing by the change in time (difference in the first and last time value). When the tof does not recieve a value, it returns -1. 
+            Therefore the tof frequency was calculated by using the same period of time, but counting only values that are not equal to -1 in the 
+            number of messages. </p>
+        <img src="files/FastRobots/Lab5/RangeSamplingTime.png", width="400"> 
+        <p style="color:lightgoldenrodyellow">The system frequency was : 222 messages/second</p> 
+        <p style="color:lightgoldenrodyellow">The TOF frequency was : 3.322 messages/second</p> 
+        <p style="color:white">The system frequency is much higher than the TOF frequency (the TOF sensor is much slower than the 
+            Artemis board). The tof sensor was made somewhat faster by getting rid of the stopRanging() line in each cycle, but was still very slow. 
+            The "solution" to this problem was to use linear interpolation between each collected data point from the TOF sensor. The change in distance 
+            divided by the time between measurements gives a velocity estimate, which can be used in each loop if new data is not ready. This part of the 
+            code is interdispersed throughout the PID_CONTROL loop shown in the prelab. </p>
 
 
+        <h3>P Tuning</h3> 
+        <p style="color:white"> To make sure the PID controller worked, a test was first done while the robot was held still, 
+            resulting in the following graph:</p>
+        <img src="files/FastRobots/Lab5/PIDStill.png", width="400">
+        <p style="color:white">It was also tested while moving; this is a graph of the controller running into the wall (kp=0.07,ki=0,kd=0). 
+            This was also before linear interpolation was used to estimate the distance while the TOF sensor was still collecting data. </p>
+        <img src="files/FastRobots/Lab5/PIDWall.png", width="400">
+        
+        <p style="color:white">The PID controller was tuned by changing the kp, ki, and kd values. The kp value was tested first, initially at a value 
+            of 0.05. A low starting value was chosen to make sure the robot did not crash. The robot then barely moved. A video is provided below of the slow 0.05 speeds:
+            </p>
+        <video width="320" height="240" controls>
+            <source src="files/FastRobots/Lab5/PIDkp0_05.mp4" type="video/mp4"> </video>
+        <p style="color:white">To test a higher value, 0.12 was tested.
+             This was also very difficult without linear interpolation of the distance, but to compensate for the 
+            low TOF sensor frequency, linear interpolation was implemented by calculating the velocity using the last two measurements and the change in time 
+            since the last loop completed (seen in the PID_CONTROL code in the prelab section).
+            It can be clearly seen that there is still some steady state error.</p>
+        <img src="files/FastRobots/Lab5/PIDkp_012.png", width="400">
+        <video width="320" height="240" controls>
+            <source src="files/FastRobots/Lab5/PIDkp012.mp4" type="video/mp4"> </video>
+        <p style="color:white">The kp value 0.1 and 0.07 were also tested (the video below is of kp = 0.07 and graphs are labelled accordingly). 
+             The robot moved 
+            towards the wall at a reasonable speed without crahsing at all of these values, but oscillations stopped at 0.07. 0.07 is likely too 
+            slow when combined with other ki and kd values. The middle value 0.1 was decided as a default value when testing ki and kd 
+            values. </p>
+        <video width="320" height="240" controls>
+            <source src="files/FastRobots/Lab5/PIDkp007.mp4" type="video/mp4"> </video>
+        <img src="files/FastRobots/Lab5/PIDkp_007.png", width="400">
+        <img src="files/FastRobots/Lab5/PIDkp_01.png", width="400">
+
+        <h3>PI Tuning</h3>
+        <p style="color:white">The ki value was then tested. There wsa not a problem with oscillations, however, so a low value was expected.
+             The initial value was 0.07 since this was similar to the lowest kp value. </p>
+        <video width="320" height="240" controls>
+            <source src="files/FastRobots/Lab5/PIDki.mp4" type="video/mp4"> </video>
+        <p style="color:white">This was clearly far too strong. The ki value was lowered to 0.04 instead. The graph is shown. This eliminates oscillating 
+            behaviour, but the steady state error is quite high. </p>
+        <img src="files/FastRobots/Lab5/PIDki004.png", width="400">
+
+        <h3>PID Tuning</h3> 
+        <p style="color:white">The kd value was then tested. The initial value was 0.1. This was far fairly successful, as videoed and graphed below.   </p>
+        <img src="files/FastRobots/Lab5/PIDkd01.png", width="400">
+        <video width="320" height="240" controls>
+            <source src="files/FastRobots/Lab5/PIDkd01.mp4" type="video/mp4"> </video>
+        <p style="color:white">The kd value was then tested at 0.12. The graph and video are again shown below. The performance seemed about the same this way.  </p>
+        <img src="files/FastRobots/Lab5/PIDkd012.png", width="400">
+        <video width="320" height="240" controls>
+            <source src="files/FastRobots/Lab5/PIDkd012.mp4" type="video/mp4"> </video>
+
+        <h3>Final PID Control</h3>
+        <p style="color:white">The final PID control was tested with the final kp, ki, and kd values. Minor adjustments were made in addition to the main PID section (adjusting kp and ki while kd already exists).
+            The robot was set to move towards the wall 
+            at a distance of 1 foot. The final values were kp = 0.085 ki = 0.055 kd = 0.15.The final PID control graph is shown below as well as the video of the robot with these 
+            parameters. With this final tuning, the speed of increase was greatly increased from the previous attempts (however, in an attempt to speed up 
+            the robot, the steady state error was also slightly increased). </p>
+        <img src="files/FastRobots/Lab5/PIDFinal.png", width="400">
+        <video width="320" height="240" controls>
+            <source src="files/FastRobots/Lab5/PIDFinal.mp4" type="video/mp4"> </video>
+    </div>
+    <div id="FastRobot_Lab6" class="subtabcontent">
+        <div class="space"></div>
+        <h2 style="color:white">Lab 6</h2>
+        <p>This lab was focused on implementing a PID for turning a set number of degrees. Most of the lab details are 
+            experimenting with tuning parameters. 
+        </p>
+        <div class="space"></div>
+
+        <h2>Prelab</h2>
+        <h3>Bluetooth Setup</h3>
+        <p style="color:white">The bluetooth was set up to send the data from the robot to the computer. The data was sent in the form of 
+            time, distance, linear interpolation, error, and u values. The code for this is shown below. There is a separate command PID_TURN
+            and PID_SEND so that data does not have to be sent and graphed (which can take a long time) if the tuning was not useful. While PID_SEND 
+            was also in the previous lab (5), PID_TURN and PID_SEND are both shown below.  </p>  
+        <img src="files/FastRobots/Lab6/PIDTurnCode.png">
+        <img src="files/FastRobots/Lab6/PIDSendCode.png">    
+        <h3>Error Accumulation for the Gyro Measurements</h3>
+        <p style="color:white">The gyro measurements accumulate error over time as seen in the earlier IMU lab. My first attempt to fix this problem was : 
+            The data was collected from the IMU yaw 
+            data several times, to measure the overall drift over 10 seconds. After collecting yaw data for 10 seconds 10 times, the average error accumulation 
+            each time averaged to 7.23 degrees (0.723 deg/second). This rate was used to subtract this value multiplied by the change in time on each loop iteration 
+            of the PID. This can also be seen in the above code used for the turning PID. However, this solutions was still ultimately unreliable, so the DMP was used by 
+            uncommenting the line disabling it in the IMU library. The PID results when testing certain gains became much more reliable, consistent, and repeatable.  </p>
     
+
+        <h2>Lab Tasks</h2>
+        <h3>Range and Sampling Time</h3>
+        <p style="color:white">The range and sampling time were calculated in the same way as in lab 5. The PID turning loop was run, 
+            and the overall frequency was measured using the average time between time array measurements. The IMU frequency was measured by the average time between updated 
+            measurements (ones that are not the same as the previous measurement). The code to calculate this and resulting frequencies are : </p>
+        <img src="files/FastRobots/Lab6/RangeSamplingTime.png", width="400">
+        <p style="color:orangered">The system frequency was : 107.44 messages/second</p>
+        <p style="color:orangered">The IMU frequency was : 47.62 messages/second</p>
+        <p style="color:white">The system frequency is higher than the linear PID. The DMP calculations may take up more time on this version of the PID. The IMU is also 
+            much faster than the TOF sensor however. The slowness of the TOF sensor in Lab 5 made the PID somewhat inconsistent, so this is a particularly useful imporvement. The system 
+            is still notably faster than the IMU, as in lab 5 as well. </p>
+
+
+        <h3>PID Turn</h3>
+        <p>The robot was set to turn 90 degrees. The values used in each test are shown on the graph (in this case kp = 0.1, ki=kd = 0). First, a P 
+            controller was tested to get a general idea of the values needed. There was a steady state error of about 10 degrees.  </p>
+        <img src="files/FastRobots/Lab6/PIDTurnP.png", width="400">
+        <video width="320" height="240" controls>
+            <source src="files/FastRobots/Lab6/PIDTurnP.mp4" type="video/mp4"> </video>
+        <p style="color:white">The PI controller was then tested. The ki value was set to 0.1, and the kd value was set to 0. The robot turned
+            much faster, in fact the ki term was too high so the robot would go too far past the goal of 90 degrees each time it changed direction. </p>
+        <img src="files/FastRobots/Lab6/PIDTurnPI.png", width="400">
+        <video width="320" height="240" controls>
+            <source src="files/FastRobots/Lab6/PIDTurnPI.mp4" type="video/mp4"> </video>
+        <p style="color:white">A lower ki value was tested until the robot settled to a steady state of 90 degrees efficiently. The ki value for this 
+            was 0.05, and the kp was also lowered to 0.04 to work better with this ki value. The batteries were also replaced between tests, which may 
+            be partially responsible for the lowered kp value. </p>
+        <img src="files/FastRobots/Lab6/PIDTurnPI2.png", width="400">
+        <video width="320" height="240" controls>
+            <source src="files/FastRobots/Lab6/PIDTurnPI2.mp4" type="video/mp4"> </video>
+        <p style="color:white">The PID controller was then tested. The kd value was set to 0.02, and the ki & kp lowered were kept at 0.03 & 
+            0.02. Raising and lowering the kd value did not have great impact, and some overshoot still occured. The video and graphed behaviour are shown 
+            below. Overall, many of the PI advantages were achieved, while the derivative term was more limited. </p>
+        <img src="files/FastRobots/Lab6/PIDTurnPID.png", width="400">
+        <video width="320" height="240" controls>
+            <source src="files/FastRobots/Lab6/PIDTurnPID.mp4" type="video/mp4"> </video>
+    </div>
+    <div id="FastRobot_Lab7" class="subtabcontent">
+        <div class="space"></div>
+        <h2 style="color:white">Lab 7</h2>
+        <p>This lab was focused on implementing a kalman filter. 
+        </p>
+        <div class="space"></div>
+
+        <h3>Estimate Drag and Momentum</h3>
+        <p style="color:white"> 
+            The drag and momentum were estimated by using a step response. The step needed to be between 50-100% of the maximum pwm 
+            (maximum = 255). The robot was to be driven toawrds the wall at this speed, so it seemed to be an unneccesary risk to drive at 
+            full speed towards the wall. A value of 55% of the maximum was then chosen, which is a pwm value of 140. The car was driven towards 
+            the wall, and the TOF distance data was sent back along with time stamps to compute the velocity. The graph below shows 
+            the distance and velocity over time while the pwm value is at 140. </p>    
+        <img src="files/FastRobots/Lab7/StepResponse.png", width="400">
+        <p style="color:white">This data was then used to calculate the rise time to 90% and the steady state speed. The formula for this was : </p>
+        <p style="color:orangered">Rise Time = (time[max_velocity])*0.9 = 1.371 * 0.9 = 1.2339 seconds</p>
+        <p style="color:white">Steady State Speed was found by looking at the above graph at the 90% rise time and then using the velocity at 
+            that value. </p>
+        <p style="color:white">These values were then used to calculate drag and mass using the following formulas : </p>
+        <p style="color:orangered">d = 1/(steady state speed )</p>
+        <p style="color:orangered">m = (-d* (rise time)) / (log(0.1))</p>
+        <img src="files/FastRobots/Lab7/DragMass.png", width="400">
+
+
+        <h3>Initialize KF</h3>
+        <p style="color:white">In order to save data, a text file was first created. Then to save an array, it was printed in the Jupyter 
+            Lab and then the output was copy and pasted into the text file. It could be copy and pasted into the jupyter notebook again 
+            if it needed to be reloaded. This was faster to implement than a CSV file, and takes no extra time to save and reload than pressing 
+            a button to do so. An example text file of time and distance data from one run is shown below: </p>
+        <img src="files/FastRobots/Lab7/TextFile.png", width="900">
+        <p style="color:white">The Kalman filter was initialized. The equations used to do this are shown below : </p>
+        <img src="files/FastRobots/Lab7/KFEquations.png", width="400">
+        <p style="color:white"> </p>
+        <img src="files/FastRobots/Lab7/KFEquations2.png", width="400">
+        <img src="files/FastRobots/Lab7/KFEquations3.png", width="400">
+        <p style="color:white">It was then time to consider the sigma values. The sigma values available were sigma_distance, sigma_veocity, 
+            and sigma_sensor. Increasing σ_sensor increases the weight of the sensor data, while the other values more heavily weight 
+            the estimated values. These calculations were used as : </p>
+        <img src="files/FastRobots/Lab7/SigmaValues_u.png", width="400">
+        <p style="color:white"></p>
+        <img src="files/FastRobots/Lab7/SigmaValues_z.png", width="400">
+
+        <h3>Implement and Test KF (in Python)</h3>
+        <p style="color:white">The Kalman filter was implemented in Python. The code for this is shown below.</p>
+        <img src="files/FastRobots/Lab7/KFCode.png">
+        <p style="color:white"> The code was then tested 
+            with the data collected in the estimation of drag and mass step. 
+            The original PID run data is shown, as well as the initial KF results:</p>
+        <img src="files/FastRobots/Lab7/PIDResults.png", width="400">
+        <img src="files/FastRobots/Lab7/KFTest.png", width="400">
+        <p style="color:white">The Kalman filter was very accurate, so the weights didn't necessarily to be altered. This was very lucky!! 
+            It still seemed like it would be most thorough to still test increasing and decreasing each value to see what impacts this has. 
+            First, sigma_distance was ajdusted. No major differences were found, but setting the sigma_distance value lower (5) seemed to 
+            decrease the quality a tad by creating an inaccurate spike at the beginning. </p>
+        <img src="files/FastRobots/Lab7/KFTestd1.png", width="400">
+        <img src="files/FastRobots/Lab7/KFTestd2.png", width="400">
+        <p style="color:white">While increasing the sensor based weights resulted in another inaccurate spike at the begining. It converged to the 
+            same value by the end, but was largely inaccurate : </p>
+        <img src="files/FastRobots/Lab7/KFTests1.png", width="400">
+        <p style="color:white">The Kalman filter best values were the sigma_distance = 20, sigma_velocity = 10, sigma_sensor = 1 (shown in the above graphs). </p>
+        
+    </div>
+    <div id="FastRobot_Lab8" class="subtabcontent">
+        <div class="space"></div>
+        <h2 style="color:white">Lab 8</h2>
+        <p>The purpose of this lab was to implement a designated "stunt" (driving towards the wall, turning around, and coming back.</p>
+        <div class="space"></div>
+        <h3>Prelab</h3>
+        <h3 style="color:white">TOF Set-up (Increasing the Sampling Rate)</h3>
+        <p style="color:white">The TOF sensor was far to slow in the previous labs using it. In order to speed it up from its previous frquency of a mere 3.322 messages/second, 
+            the calls to the tof sensor were examined. The line sensor.startRanging() had not been eliminated from the code previously, even though stopRanging() had been removed. 
+            Removing this line sped up the frequency. Upon running the same PID loop that was used in lab 5 (where the frequency of 3.322 messages/second was measured, for consistency), 
+            the new frequency was 9.75, abou 3 times as much as it wsa before with this change and therefore much more reliable. </p>
+        <img src="files/FastRobots/Lab8/TOFFrequency.png", width="400">
+
+        <h3>Lab Tasks / Chosen Stunt</h3>
+        <h3 style="color:white">Drifting : Code Strategy</h3>
+        <p style="color:white">The starting line of tape is 4 meters away from the wall. The drift itself must also start 3 ft / 914 mm away from the wall. Another 
+            tape line is placed for reference at that spot. Therefore, the code strategy is to keep constant speed until the robot gets to 914 mm from the wall (it would not
+             make sense to use the linear PID here since the robot should still be going fast in order to drift and not stop before the turn). Then, the turning PID from lab 6 
+             will be used to turn 180 degrees. The robot will then return to the starting line at the sae constant speed as it approached the wall. The code implementation is shown below : </p>
+        <img src="files/FastRobots/Lab8/DriftingCode.png", width="1200">
+
+        <h3 style="color:white">Drifting : Attempts</h3>
+        <p style="color:white"> This strategy was sucessful. The PID parameters used for the turn were slightly different than the PID from Lab 6. 
+            kp = ,ki = ,kd = 0.
+        </p>
+        <video width="320" height="240" controls>
+            <source src="files/FastRobots/Lab8/Drifting.mp4" type="video/mp4"> </video>
+        <video width="320" height="240" controls>
+            <source src="files/FastRobots/Lab8/Drifting2.mp4" type="video/mp4"> </video>
+        <video width="320" height="240" controls>
+            <source src="files/FastRobots/Lab8/Drifting3.mp4" type="video/mp4"> </video>
+    </div>
+    <div id="FastRobot_Lab9" class="subtabcontent">
+        <div class="space"></div>
+        <h2 style="color:white">Lab 9</h2>
+        <p>
+            The goal of this lab was to use the PID from lab 6 to turn a few degrees at a time and take distance measurements using 
+            the TOF at each stop. This was done to collect data for localization in later labs.
+        </p>
+        <div class="space"></div>
+
+        <h3>Control Choices (Orientation Control)</h3>
+        <p style="color:white">The control options for full credit include an orientation PID or angular speed PID. Due to already having a PID 
+            controller for orientation from previous labs, and the increased accuracy of still readings, the orientation controller was used. 
+            The robot was programmed to use the controller to go in 20 degree increments (instead of the maximum 25 instead of pushing the limit of inaccurate graphs), 
+            and then taking a tof distance measurement at each 20 degree pause. This is a total of 18 readings. The code for this is below, and 
+            mostly re-uses functions from Lab 6. In order to prevent wrap around from -180 to +180 degrees after half of a turn, 360 is 
+            added to the negative numbers (every orientation after the halfway point at 180 degrees). </p>
+        <img src="files/FastRobots/Lab9/OrientationCode.png", width="900">
+        <p style="color:white">The robot was then tested to see how accurately the robot was turning about its axis. The command 
+            sent to test is displayed below and ran the code above, which was also used to collect data in the lab. </p>
+        <img src="files/FastRobots/Lab9/OrientationCommand.png", width="400">
+        <p style="color:white">The robot stays approximately within the 1 foot tile when turning "about its axis". This is an error 
+            in the radius of 0-6 inches, meaning the maximum error for the TOF sensor is 6 inches off. The average error is then 
+            approximately 3 inches. </p>
+        <video width="320" height="240" controls>
+            <source src="files/FastRobots/Lab9/Orientation.mp4" type="video/mp4"> </video>
+        <p style="color:white">The DMP has very little drift, so this was not a major issue ot consider in compounding error from the TOF 
+            measurements due to being somewhat off axis. The accuracy of the sensors was tested as well in lab three. The deviation in the measurements 
+            according to this earlier lab is approximately 1.71-2.05 mm, which is negligible for these calculations. A notable exception is that when the sensor obstacles are 
+            all out of the specified range. In a 4x4m square room, this is an approximate error overall (from the drift off of the center axis) 
+            of 1 foot = 0.3048 (the entire diameter of the circle of error in the 1 foot tile), and an average of 3 inches off axis = 0.0762m. </p>
+
+        <h3>Read Out Distances</h3>
+        <p style="color:white">The distances were then read out, first from one turn out of the lab for proof of concept, and then of all 4 
+            target points in the lab area. For the original turn (in a small room), the following graphs were acquired: </p>
+        <img src="files/FastRobots/Lab9/YawandPWM.png", width="400">
+        <p style="color:white">The above yaw & pwm graph shows the consistency of the turns. Future calculations will still use 
+            direct yaw readings for increased accuracy, but it can be seen here that the turns are relatively accurate and consistant. </p>
+        <img src="files/FastRobots/Lab9/YawandDistance.png", width="400">
+        <img src="files/FastRobots/Lab9/YawandDistance2.png", width="400">
+        <img src="files/FastRobots/Lab9/RoomSetup.png", width="400">
+        <p style="color:white">The distance graph shows the distance from the wall at each of the 18 points. The two turns completed have similar 
+            data (peaks and dips where they should be in the room). A picture of the setup is provided to better inturpret these readings. Larger 
+            readings correspond with alcloves in the room that are far away, while the nearer readings correspond to where the walls are closer. Therefore, 
+            the behaviour is predictable and accurate. </p>
+        <img src="files/FastRobots/Lab9/PolarPlot_TestRotation.png", width="400">
+        <p style="color:white">The polar plot of the data is shown below. The distance from the wall is shown in the radial direction. 
+            The two rotations mostly overlap with some inconsistency in degree of measurements (not exactly 20 degree turns every time), 
+            but are very similar in terms of distance measurements in similar areas in the room and clearly match the room diagram 
+            (assuming 0 degrees is the positive y axis of the diagram). </p>
+        <h3>Polar Plots were then taken at each of the 4 points in the lab area and provided below: </h3>
+        <p style="color:white"> Polar Plot from (-3,-2):</p>
+        <img src="files/FastRobots/Lab9/PolarPlot_Pointneg3neg2.png", width="400">
+        <p style="color:white"> Polar Plot from (0,3):</p>
+        <img src="files/FastRobots/Lab9/PolarPlot_Point03.png", width="400">
+        <p style="color:white"> Polar Plot from (5,-3):</p>
+        <img src="files/FastRobots/Lab9/PolarPlot_Point5neg3.png", width="400">
+        <p style="color:white"> Polar Plot from (5,3):</p>
+        <img src="files/FastRobots/Lab9/PolarPlot_Point53.png", width="400">
+
+        <h3>Merge and Plot Readings</h3>
+        <p style="color:white">The readings were transformed into real world coordinates and plotted together. The real world transformation was 
+            done using the following rotation matrix equation equation and simply adding any transformations after the rotation was complete. 
+            In otherwords, using r and theta (tof measurements and yaw of the robot) for the final value results in x = x0 + distance*sin(yaw) 
+            and y = y0 + distance*cos(yaw). </p>
+        <img src="files/FastRobots/Lab9/RotMatrix.png", width="400">
+        <img src="files/FastRobots/Lab9/RealWorldTransform.png", width="400">
+        <p style="color:white">This final data is not overwhelmingly accurate. 
+            It clearly does not have enough readings, and could be improved with both more readings per 
+            rotation and more than one rotaiton. The tof sensor settings could be experimented with as well, which are more accurate at 
+            certain distances for certain settings. </p>
+    </div>
+    <div id="FastRobot_Lab10" class="subtabcontent">
+        <div class="space"></div>
+        <h2 style="color:white">Lab 10</h2>
+        <p>
+            This lab used a simulation of the robot to program localization algorithms before using the real robot in lab 11. Localization and 
+            navigation could be tested without focusing on electrical issues or dubugging. 
+        </p>
+        <div class="space"></div>
+        <h3>Lab Goals and Setup</h3>
+        <p style="color:white">The simulation records the robots position using 3 degrees of freedom: the x and y position and the angle theta. 
+            The goal is to apply grid localization using a Bayes Filter. A pre-planned trajectory is given. The initial simulation travels 
+            along the following trajectory (in green), but the robot sensors measuring its position are extremely inaccurate (in red).  </p>
+        <img src="files/FastRobots/Lab10/InitialOdemetry.png", width="400">
+
+        <h3>Bayes Filter Algorithm</h3>
+        <p style="color:white">The Bayes Filter algorithm is: </p>
+        <img src="files/FastRobots/Lab10/BayesFilterAlg.png", width="400">
+        <p style="color:white">The Bayes Filter algorithm in the Lab 10 code is also provided below (althoguh many of the functions called 
+            are incomplete and are finished throughout the lab) :</p>
+        <img src="files/FastRobots/Lab10/BayesFilterCode.png", width="400">
+
+        <h3>Compute Control Function</h3>
+        <p style="color:white">The parameters for this function which moves the robot to a new position are the initial rotation, translation, and final rotation. 
+            The diagram shows these transformations:  </p>
+        <img src="files/FastRobots/Lab10/ComputeControl.png", width="400">
+        <p style="color:white">The code for this function is shown below. </p>
+        <img src="files/FastRobots/Lab10/ComputeControlCode.png", width="400">
+
+        <h3>Odometry Motion Function</h3>
+        <p style="color:white">This function the probability of the transition from the previous state to the next state using a gaussian 
+            probability model. </p>
+        <img src="files/FastRobots/Lab10/OdometryMotion.png", width="400">
+        <p style="color:white">The code for this function is shown below. </p>
+        <img src="files/FastRobots/Lab10/OdometryMotionCode.png", width="400">
+
+        <h3>Prediction Step Function</h3>
+        <p style="color:white">This function is used to predict the next state of the robot. It uses the previous two functions (the compute control function and 
+            the odometry model function) to compute the transition probability for each pair of previous pose -> current pose. The code for this function is shown below. </p>
+        <img src="files/FastRobots/Lab10/PredictionStepCode.png", width="400">
+
+        <h3>Sensor Model Function</h3>
+        <p style="color:white">The sensor model function calculates the sensor reading probability at each of 18 
+            angle measurements gathered while spinning 360 degrees to collect data. Assuming individual readings are independent, this results in the formula: </p>
+        <img src="files/FastRobots/Lab10/SensorModel.png", width="400">
+        <p style="color:white">The code for this function is shown below. </p>
+        <img src="files/FastRobots/Lab10/SensorModelCode.png", width="400">
+
+        <h3>Update Function</h3>
+        <p style="color:white">The update function is used to update the robot's believed position. </p>
+        <img src="files/FastRobots/Lab10/UpdateCode.png", width="400">
+
+        <h3>Simulation Testing</h3>
+        <p style="color:white">The simulation was then run. The given path from the introduction was run again. 
+            The green line is still the true path of the robot, while the red line is the odometry data. The new blue line represents the Bayes Filter. It is clear that 
+            the Bayes Filter line is much more accurate (closer to the green path) than the odometry data (which is, especially towards the end of the trajectory, no 
+            where near the green ground data).</p>
+        <video width="640" height="380" controls>
+            <source src="files/FastRobots/Lab10/BestTrialBayesFilter.mp4" type="video/mp4"> </video>
+    </div>
+    <div id="FastRobot_Lab11" class="subtabcontent">
+        <div class="space"></div>
+        <h2 style="color:white">Lab 10</h2>
+        <p>
+            This lab used a the localization implemented in the Lab 10 simulation on the real robot. The robot estimates where in a given 
+            maze it is. 
+        </p>
+        <div class="space"></div>
+
+        <h3>Lab Goals and Setup</h3>
+        <p style="color:white">The goal of this lab is to implement a Bayes Filter on the real robot 
+            9as opposed to the lab 10 simulation. Another Lab 11 simulation is given with functional code (no Bayes Filter parts to implement 
+            separately). The simulation for the given filter was tested and follows the real position closely: </p>
+        <img src="files/FastRobots/Lab11/Lab11_Sim_Plot1.png", width="400">
+
+        <h3>Bayes Filter Algorithm</h3>
+        <p style="color:white">The Bayes Filter algorithm consists of the perform_observation_loop function in python and the arduino code. 
+            The code is: </p>  
+        <img src="files/FastRobots/Lab11/BayesFilterCode1.png", width="400">
+        <img src="files/FastRobots/Lab11/BayesFilterCode2.png", width="400">
+
+        <h3>Real Localization Results</h3>
+        <p style="color:white">The filter is used at the points marked around tha lab. The truth data and localization estimate are shown on each graph. 
+            Points are given in the units of feet from the origin.</p>
+        <p style="color:white">At Point (-3,-2): </p>
+        <img src="files/FastRobots/Lab11/Lab11_Plot_n3_n2.png", width="400">
+        <p style="color:white">At Point (0,3): </p>
+        <img src="files/FastRobots/Lab11/Lab11_Plot_0_0.png", width="400">
+        <p style="color:white">At Point (5,-3): </p>
+        <img src="files/FastRobots/Lab11/Lab11_Plot_5_n3.png", width="400">
+        <p style="color:white">At Point (5,3): </p>
+        <img src="files/FastRobots/Lab11/Lab11_Plot_5_3.png", width="400">
+        <p style="color:white">The plots are generally in the specified corners, but not overwhelmingly accurate within those corners.  </p>
     </div>
     
-    <div id="MakeAThon" class="tabcontent">
-        <!-- Add scrolling photo bar -->
-        <!-- Project Overview -->
+    <div id="MakeAThon" class="tabcontent" style="width:98vw;overflow:hidden;">
+        <div class="space"></div>
+        <h3 style="color:white;">Cornell University 24 Hr Big Red Make-A-Thon</h3>
+        <h2>Smart Cities Navigation Robot</h2>
+
+        <div class="text-row">
+            <div class="left-column">
+                <h3>Skills Used</h3>
+            </div>
+            <div class="right-column">
+                <p>CAD design, 3D printing/ rapid prototyping, soldering, Raspberry Pi OS, LiDAR testing </p>
+            </div>
+        </div>
+
+        <div class="text-image-background" style="overflow:auto;background-color: white;width:98vw;">
+            <div class="color-image-background" style="width:98vw;">
+                <img class="background-image" src="files/image_makeathonCityGraphic.png" style="
+                width: 98vw;
+                height:50vh;
+                    mask-image: linear-gradient(
+                    to right, white, transparent 90%
+                );">
+                <h2 style="color:black;font-size: 40px;position: absolute; top: 10%;left:50%;"> Project Overview and Purpose</h2>
+                <p style="color:black;position: absolute; top: 25%;width: 50%;left:50%;">
+                    Cornell University hosted a 24 hour make-a-thon with the theme smart cities. The students involved chose to make a robot 
+                    that targets specifically disabled people navigating through a city. Challeges include limited safety factors for those 
+                    with limited vision or hearing (cross walks do not always have clear audible signals signalling when it is safe to 
+                    cross the road, it is difficult to use a map with limited senses since one might miss visual and audio cues from map apps, 
+                    it can be difficult to avoid obstacles that one cannot see on a busy and dynamic city street).
+                </p>
+            </div>
+        </div>
+
+        <img src="files/image_makeathonRobotDesign.png" style="width:100%;">
+        <div style="display:flex;justify-content: center;align-items: center;flex-direction: column;">
+            <h2>The Implementation</h2>
+        <img src="files/image_makeathonRobotReal.png" style="width:100%;">
+        <p style="font-size: 30px;">A handle also extends above the robot for a user to grab onto.</p>
+        </div>
+        <div style="display:flex;justify-content: center;align-items: center;flex-direction: column;">
+            <h2>Testing</h2>
+            <p>Testing was somewhat limited since this was a timed make-a-thon. The LiDAR was tested and could sense distances properly. 
+                The motors to the treads were also funcional, and the treads (made in this prototype with 3D printed TPU) were stable during 
+                use. No trips were taken using the Google Maps API, although the Raspberry Pi was connected to the internet and the Google 
+                Maps API was connected to the robot even though the functionality of the Google Maps was not not finished during this time crunch.
+            </p>
+        </div>
     </div>
 
 

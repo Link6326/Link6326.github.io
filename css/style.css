@@ -66,10 +66,16 @@ body {
     margin: 0;
     font-size: 50px;
 }
+.tabcontent h3{
+    color: orangered;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    font-size: 30px;
+}
 .tabcontent p {
     color: white;
     font-family: Arial, sans-serif;
-    font-size: 20px;;
+    font-size: 20px;
 }
 .subtabcontent {
     display: none;
@@ -157,7 +163,7 @@ body {
 }
 .color-image-background {
     width: 100%;
-    height: fit-content;
+    height: parent;
     position: relative;
     background-color: white;
 }

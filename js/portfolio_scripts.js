@@ -27,7 +27,11 @@ function openTab(event, tabName) {
         document.getElementById(tabName).style.display = "block";
         event.currentTarget.className += " active";
         document.body.scrollTop = document.documentElement.scrollTop = 0;
-    } else {
+    } else if (tabName == "MakeAThon") {
+        document.getElementById(tabName).style.display = "block";
+        event.currentTarget.className += " active";
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+    }else {
         document.getElementById("defaultOpen" + tabName).click();
     }
 }
