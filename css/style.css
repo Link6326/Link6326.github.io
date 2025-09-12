@@ -104,6 +104,82 @@ body {
     padding: 0px;
     /* position: absolute; */
 }
+.orange-row{
+    padding: 5px;
+    background-color: orangered;
+    height: fit-content;
+}
+.orange-row summary:hover{
+    background-color: lightgoldenrodyellow;
+}
+.orange-row summary:hover p{
+    color: black;
+}
+.orange-row summary::marker{
+    color: black;
+}
+.orange-row h3{
+    color:black;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    font-size: 30px;
+}
+.orange-row p{
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    margin: 0;
+    padding: 0px;
+}
+.black-row{
+    padding: 5px;
+    background-color: black;
+    height: fit-content;
+    border: 2px solid white;
+}
+.black-row summary:hover{
+    background-color: lightgrey;
+}
+.black-row summary::marker{
+    color: white;
+}
+.black-row h3{
+    color:white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    font-size: 30px;
+}
+.black-row p{
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    margin: 0;
+    padding: 0px;
+}
+.white-row{
+    padding: 5px;
+    background-color: white;
+    height: fit-content;
+}
+.white-row summary:hover{
+    background-color: lightgrey;
+}
+.white-row summary::marker{
+    color: orangered;
+}
+.white-row h3{
+    color:orangered;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    font-size: 30px;
+}
+.white-row p{
+    color: black;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    margin: 0;
+    padding: 0px;
+}
 .text-row {
     padding: 0;
     height: fit-content;

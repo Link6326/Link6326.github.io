@@ -77,7 +77,7 @@
             <p>I am a new graduate from Cornell University, having double majored in Computer Science and Mechanical Engineering. 
                 I have been involved in a variety of projects, with interest in robotics (Cornell CUP robotics, Fast Robots project, 
                 Big Red Make-a-thon) and some environmental science (senior design project, Cornell University Project Greenhouse, Cape Henlopen 
-                State Park Internship). This portfolio chronicles several of these technical projects. This portfolio is also a bit or a 
+                State Park Internship). This portfolio chronicles several of these technical projects. This portfolio is also a bit of a 
                 mini-project itself! No templates or bootstrap/ similar assistive tools were used in its creation: only HTML, CSS, and JavaScript. </p>
             </div>
             </div>
@@ -413,229 +413,275 @@
     <div id="FastRobot_Lab1" class="subtabcontent">
         <div style="background-color: black; margin: 10vh 100vw;"></div>
         <h2 style="color:white;">Lab1</h2>
-        <h3>Prelab : Setup</h3>
-        <p>
-            It was necessary to first download the Arduino IDE (ver. 2.3.4) 
-            and Artemis Nano board extension. A virtual environment was also created for editing files in python and 
-            JupyterNotebook in order to send and recieve messages from the board with Bluetooth Low Energy (BLE). Then the Lab1A tasks 
-            and scripts were run to verify that the communication between devices worked without bluetooth and that the Artemis board was 
-            functioning properly. Then Lab 1B involved the virtual environment, which was used with more given and modified scripts focused on 
-            bluetooth use. Before working on lab tasks and working with the bluetooth, the MAC adress from the Artemis boad was: </p>
-        <img src="files/FastRobots/Lab1/mac_address.png">
-        <p>
-            The UUID (Universally Unique Identifier) was generated as well to avoid confusion with other boards in the room. The following block 
-            includes the input lines and output (ie the generated UID).
+        <p>This lab was largely dedicated to downloading prerequitites and making sure example software ran properly on the board.
+            Lab1A tasks 
+            verify that the communication between devices worked without bluetooth (using serial communication). Lab 1B involved the 
+            virtual environment, which was used with more provided and modified scripts focused on 
+            bluetooth use. 
         </p>
-        <img src="files/FastRobots/Lab1/UUID.png">
-        <h3>Prelab : Codebase</h3>
-        <p>
-            The connection between the Artemis and laptop was established using bluetooth. In a bluetooth 
-            connection, there is a peripheral device and central device (the peripheral device stores the services and the central device
-            views the services and gets data from the peripheral). The Artemis board is the peripheral device and the laptop is the central
-            device.
-        </p>
+        <h3>Prelab</h3>
+        <div class="black-row">
+            <details>
+                <summary><h3>Downloading Pre-requisites</h3>
+                <p>Click to Expand</p></summary>
+                <p>
+                    It was necessary to first download the Arduino IDE (ver. 2.3.4) 
+                    and Artemis Nano board extension. A virtual environment was also created for editing files in python and 
+                    JupyterNotebook in order to send and recieve messages between the board and computer using
+                     Bluetooth Low Energy (BLE).  The MAC adress from the Artemis boad was: </p>
+                <img src="files/FastRobots/Lab1/mac_address.png">
+                <p>
+                    The UUID (Universally Unique Identifier) was generated as well to avoid confusion with other boards in the room. The following block 
+                    includes the input lines and output (ie the generated UID).
+                </p>
+                <img src="files/FastRobots/Lab1/UUID.png">
+            </details>
+        </div>
+        <div class="white-row">
+            <details>
+                <summary><h3>Prelab : Codebase</h3><p>Click to Expand</p></summary>
+                <p>
+                    The connection between the Artemis and laptop was established using bluetooth. In a bluetooth 
+                    connection, there is a peripheral device and central device (the peripheral device stores the services and the central device
+                    views the services and gets data from the peripheral). The Artemis board is the peripheral device and the laptop is the central
+                    device. For Lab 1A using serial communication, The BAUD rate in all given example scripts and the serial montor was reset to 115200 so that the 
+                    computer could communicate with the board consistently for all scripts.
+                </p>
+            </details>
+        </div>
+        
+        
         <div style="background-color: black; margin: 10vh 100vw;"></div>
         <h3>Lab 1A Tasks</h3>
-        <div class="text-row">
-            <div class="left-column">
-                <h3 style="color:white">Configuration</h3>
-            </div>
-            <div class="right-column">
-                <p>The BAUD rate in all given example scripts and the serial montor was reset to 115200 so that the 
-                    computer could communicate with the board consistently for all scripts.</p>
-            </div>
+        <p style="font-size: 30px;">CLICK ANY TASK TO EXPAND</p>
+        <div class="black-row">
+            <details>
+                <summary><h3>Task 1</h3> <p>Blinking LED for the Artemis Nano</p></summary>
+                <div class="text-row">
+                    <div class="left-column">
+                        <p>Running the example script blink to make the LED blink was successful.</p>
+                    </div>
+                    <div class="right-column" style="display: flex; align-items: center; justify-content: center;">
+                        <video height=300px controls muted>
+                            <source src="files/FastRobots/Lab1/blink.mp4">
+                        </video>
+                    </div>
+                </div>
+            </details>
         </div>
-        <div class="text-row" style="background-color: white;">
-            <div class="left-column">
-                <h3>Task 1</h3>
-                <p style="color:black">Running the example script blink to make the LED blink was successful.</p>
-            </div>
-            <div class="right-column" style="display: flex; align-items: center; justify-content: center;">
-                <video height=300px controls>
-                    <source src="files/FastRobots/Lab1/blink.mp4">
-                </video>
-            </div>
+        <div class="white-row">
+            <details>
+                <summary><h3>Task 2</h3> <p>Echo Serial Commands</p></summary>
+                <div class="text-row"">
+                    <div class="left-column">
+                        <p>Running the example script Example4_Serial to make the Serial Monitor echo inputs was successful.</p>
+                    </div>
+                    <div class="right-column" style="display: flex; align-items: center; justify-content: center;">
+                        <video height=300px controls muted>
+                            <source src="files/FastRobots/Lab1/serial.mp4">
+                        </video>
+                    </div>
+                </div>
+            </details>
         </div>
-        <div class="text-row" style="background-color: orangered;">
-            <div class="left-column">
-                <h3 style="color:black">Task 2</h3>
-                <p style="color:white">Running the example script Example4_Serial to make the Serial Monitor echo inputs was successful.</p>
-            </div>
-            <div class="right-column" style="display: flex; align-items: center; justify-content: center;">
-                <video height=300px controls>
-                    <source src="files/FastRobots/Lab1/serial.mp4">
-                </video>
-            </div>
+        <div class="orange-row">
+            <details>
+                <summary><h3>Task 3</h3> <p>Testing Thermistor Functionality</p></summary>
+                <div class="text-row">
+                    <div class="left-column">
+                        <p>Running the example script Example2_analogRead to make the Serial Monitor display the thermistor output
+                            was successful. The temperature reading goes from approx. 33600 to aprox. 33800 while being held to increase the temperature 
+                        with body heat.</p>
+                    </div>
+                    <div class="right-column" style="display: flex; align-items: center; justify-content: center;">
+                        <video height=300px controls muted>
+                            <source src="files/FastRobots/Lab1/analog_therm.mp4">
+                        </video>
+                    </div>
+                </div>
+            </details>
         </div>
-        <div class="text-row">
-            <div class="left-column">
-                <h3 style="color:white;">Task 3</h3>
-                <p>Running the example script Example2_analogRead to make the Serial Monitor display the thermistor output
-                    was successful. The temperature reading goes from approx. 33600 to aprox. 33800 while being held to increase the temperature 
-                   with body heat.</p>
-            </div>
-            <div class="right-column" style="display: flex; align-items: center; justify-content: center;">
-                <video height=300px controls>
-                    <source src="files/FastRobots/Lab1/analog_therm.mp4">
-                </video>
-            </div>
-        </div>
-        <div class="text-row" style="background-color: white;">
-            <div class="left-column">
-                <h3>Task 4</h3>
-                <p style="color:black">Running the example script Example1_MicrophoneOutput was successful. The intent was to read the output of
-                    the microphone sensor (high numbers for loud sounds, low numbers when there is little/no microphone input or abmient sound). 
-                    The output increases from a few hundred to 21,000 after snapping in front of the board, demonstrating that this device works..</p>
-            </div>
-            <div class="right-column" style="display: flex; align-items: center; justify-content: center;">
-                <video height=300px controls>
-                    <source src="files/FastRobots/Lab1/sound.mp4">
-                </video>
-            </div>
+        <div class="black-row">
+            <details>
+                <summary><h3>Task 4</h3> <p>Microphone Functionality Verification</p></summary>
+                <div class="text-row">
+                    <div class="left-column">
+                        <p>Running the example script Example1_MicrophoneOutput was successful. The intent was to read the output of
+                            the microphone sensor (high numbers for loud sounds, low numbers when there is little/no microphone input or abmient sound). 
+                            The output increases from a few hundred to 21,000 after snapping in front of the board, demonstrating that this device works..</p>
+                    </div>
+                    <div class="right-column" style="display: flex; align-items: center; justify-content: center;">
+                        <video height=300px controls muted>
+                            <source src="files/FastRobots/Lab1/sound.mp4">
+                        </video>
+                    </div>
+                </div>
+            </details>
         </div>
 
-        <div style="background-color: black; margin: 10vh 100vw;"></div>
+        <div class="space"></div>
 
         <h3>Lab 1B Tasks</h3>
-        <div class="text-row" style="background-color: orangered; width:98vw;">
-            <div class="left-column">
-                <h3 style="color:black">Configuration</h3>
-            </div>
-            <div class="right-column" style="width:65vw;">
-                <p style="color:white">Lab 1B focused on implementing several functions allowing bluetooth communication between the computer 
-                    and artemis board. The commands implemented are detailed below. The BAUD rate in all given example scripts and the serial montor was reset to 115200 so that the 
-                    computer could communicate with the board consistently for all scripts. Furthermore, the MAC address and the UUID generated 
-                    in the prelab were used and entered into their respective variables were necessary (the configuration.yaml file and in 
-                    the ble_arduino.ino file).</p>
-            </div>
+        <p style="font-size: 30px;">CLICK ANY TASK TO EXPAND</p>
+        <div class="white-row">
+            <details>
+                <summary><h3>Task 1</h3> <p>Implement the first bluetoooth command (skeleton code provided)</p></summary>
+                <div class="text-row">
+                    <div class="left-column">
+                        <p>This task was to use and create the ECHO command (text typed in the computer will print on the Artemis Serial monitor).
+                             Much of the outline was already created, 
+                            so printing the given message "Robot says -> __input__ :)" required creating a print statement with that message 
+                            on the Artemis. 
+                            The code for the echo command and output are ultimately:</p>
+                    </div>
+                    <div class="right-column" style="display: flex; align-items: center; justify-content: center;flex-direction: column;">
+                        <img src="files/FastRobots/Lab1/ECHO_code.png" style="width:65vw;">
+                        <img src="files/FastRobots/Lab1/ECHO_output.png" style="width:65vw;">
+                    </div>
+                </div>
+            </details>
         </div>
-        <div class="text-row">
-            <div class="left-column">
-                <h3 style="color:white;">Task 1</h3>
-                <p>This task was to use and create the ECHO command. Much of the outline was already created, 
-                    so printing the given message "Robot says -> __input__ :)" required creating a print statement with that message. 
-                    The code for the echo command and output are ultimately:</p>
-            </div>
-            <div class="right-column" style="display: flex; align-items: center; justify-content: center;flex-direction: column;">
-                <img src="files/FastRobots/Lab1/ECHO_code.png" style="width:65vw;">
-                <img src="files/FastRobots/Lab1/ECHO_output.png" style="width:65vw;">
-            </div>
+        <div class="orange-row">
+            <details>
+                <summary><h3>Task 2</h3> <p>A similar bluetooth command to Task 1 is created, this time reading floats</p></summary>
+                    <div class="text-row">
+                        <div class="left-column">
+                            <p>This task was intended to create and use the SEND_THREE_FLOATS function. This function is 
+                                intended to take 3 float inputs and extract those values in the Arduino sketch/ display them in the Serial 
+                                Monitor. The code and result for the SEND_THREE_FLOATS command implemented was:</p>
+                        </div>
+                        <div class="right-column" style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                            <img src="files/FastRobots/Lab1/THREEFLOATS_code.png" style="width:50vw;">
+                            <img src="files/FastRobots/Lab1/THREEFLOATS_output.png" style="width:50vw;">
+                        </div>
+                    </div>
+            </details>
         </div>
-        <div class="text-row" style="background-color: white;">
-            <div class="left-column">
-                <h3>Task 2</h3>
-                <p style="color:black">This task was intended to create and use the SEND_THREE_FLOATS function. This function is 
-                    intended to take 3 float inputs and extract those values in the Arduino sketch/ display them in the Serial 
-                    Monitor. The code and result for the SEND_THREE_FLOATS command implemented was:</p>
-            </div>
-            <div class="right-column" style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
-                <img src="files/FastRobots/Lab1/THREEFLOATS_code.png" style="width:65vw;">
-                <img src="files/FastRobots/Lab1/THREEFLOATS_output.png" style="width:65vw;">
-            </div>
+        <div class="black-row">
+            <details>
+                <summary><h3>Task 3</h3> <p>Create a Bluetooth command without a pre-existing skeleton for the function placement in the code flow.</p></summary>
+                <div class="text-row">
+                    <div class="left-column">
+                        <p style="color:white">The purpose of this task was to create the GET_TIME_MILLIS command. Unlike the previous 
+                            2 tasks, this command did not already have skeleton code throughout the ble_arduino.ino and cmd_types.py file. 
+                            The code implemented in ble_arduino.ino is shown in the topmost figure, followed by the time printed in the arduino 
+                            serial monitor. The goal, however, was to send the time from the arduino to the computer over bluetooth. Therefore, the 
+                            time output is also attached in the final figure.
+                        </p>
+                    </div>
+                    <div class="right-column" style="display: flex; align-items: center; justify-content: center;flex-direction: column;">
+                        <!-- Add right column  -->
+                        <img src="files/FastRobots/Lab1/TIME_code.png" style="width:65vw;">
+                        <img src="files/FastRobots/Lab1/TIME_output.png" style="width:65vw;">
+                        <img src="files/FastRobots/Lab1/TIME_output2.png" style="width:65vw;">
+                    </div>
+                </div>
+            </details>
         </div>
-        <div class="text-row" style="background-color: orangered;">
-            <div class="left-column">
-                <h3 style="color:black">Task 3</h3>
-                <p style="color:white">The purpose of this task was to create the GET_TIME_MILLIS command. Unlike the previous 
-                    2 tasks, this command did not already have skeleton code throughout the ble_arduino.ino and cmd_types.py file. 
-                    The code implemented in ble_arduino.ino is shown in the topmost figure, followed by the time printed in the arduino 
-                    serial monitor. The goal, however, was to send the time from the arduino to the computer over bluetooth. Therefore, the 
-                    time output is also attached in the final figure.
-                </p>
-            </div>
-            <div class="right-column" style="display: flex; align-items: center; justify-content: center;flex-direction: column;">
-                <!-- Add right column  -->
-                 <img src="files/FastRobots/Lab1/TIME_code.png" style="width:65vw;">
-                 <img src="files/FastRobots/Lab1/TIME_output.png" style="width:65vw;">
-                 <img src="files/FastRobots/Lab1/TIME_output2.png" style="width:65vw;">
-            </div>
+        <div class="white-row">
+            <details>
+                <summary><h3>Task 4</h3> <p>Set up a Notification Handler (The computer handles responses from the Artemis Board.)</p></summary>
+                <div class="text-row">
+                    <div class="left-column">
+                        <p>This task involved setting up a notification handler in python in the Jupyer Notebook. JUST the time portion 
+                            of the string needs to be extracted. The code involved and output were:</p>
+                    </div>
+                    <div class="right-column" style="display: flex; align-items: center; justify-content: center;flex-direction: column;">
+                        <img src="files/FastRobots/Lab1/NOTIFICATION_code.png" style="width:65vw;">
+                        <img src="files/FastRobots/Lab1/NOTIFICATION_output.png" style="width:65vw;">
+                    </div>
+                </div>
+            </details>
         </div>
-        <div class="text-row">
-            <div class="left-column">
-                <h3 style="color:white;">Task 4</h3>
-                <p>This task involved setting up a notification handler in python in the Jupyer Notebook. JUST the time portion 
-                    of the string needs to be extracted. The code involved and output were:</p>
-            </div>
-            <div class="right-column" style="display: flex; align-items: center; justify-content: center;flex-direction: column;">
-                <img src="files/FastRobots/Lab1/NOTIFICATION_code.png" style="width:65vw;">
-                <img src="files/FastRobots/Lab1/NOTIFICATION_output.png" style="width:65vw;">
-            </div>
+        <div class="orange-row">
+            <details>
+                <summary><h3>Task 5</h3> <p>Determine how fast data points are collected & sent between the computer and artemis. (Send data as it is aquired)</p></summary>
+                <div class="text-row">
+                    <div class="left-column">
+                        <p>To determine how fast messages can be sent, a loop was created that would act over 5 seconds. The number of messages would be divided 
+                            by 5 seconds for the final messages/second speed. The loop TIME_MESSAGE_LOOP was created the same way that the GET_TIME_MILLIS command was created 
+                            (equal to 7 instead of 6 in cmd_types.py). The code for the loop is shown. The result was that 
+                            the total number of messages printed by the serial monitor was 175. This means that (N=175)/5 messages were sent per second, 
+                            which is 
+                            equal to 35 messages/second.</p>
+                    </div>
+                    <div class="right-column" style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                        <img src="files/FastRobots/Lab1/TIME_LOOP_code.png" style="width:65vw;">
+                    </div>
+                </div>
+            </details>
         </div>
-        <div class="text-row" style="background-color: white;">
-            <div class="left-column">
-                <h3>Task 5</h3>
-                <p style="color:black">To determine how fast messages can be sent, a loop was created that would act over 5 seconds. The number of messages would be divided 
-                    by 5 seconds for the final messages/second speed. The loop TIME_MESSAGE_LOOP was created the same way that the GET_TIME_MILLIS command was created 
-                    (equal to 7 instead of 6 in cmd_types.py). The code for the loop is shown. The result was that 
-                    the total number of messages printed by the serial monitor was 175. This means that (N=175)/5 messages were sent per second, 
-                    which is 
-                    equal to 35 messages/second.</p>
-            </div>
-            <div class="right-column" style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
-                <img src="files/FastRobots/Lab1/TIME_LOOP_code.png" style="width:65vw;">
-            </div>
+        <div class="black-row">
+            <details>
+                <summary><h3>Task 6</h3> <p>Determine how fast data points are collected & sent between the computer and artemis. (Send data all at once after it is aquired)</p></summary>
+                <div class="text-row">
+                    <div class="left-column">
+                        <p>In Task 5, the goal was to see how fast messages could be sent. A new strategy was attempted to make the messages 
+                            faster in Task 6 in a new command SEND_TIME_DATA. All of the timestamps were generated and stored in an array "time_arr", and the messages in the 
+                            array were sent afterwards. 
+                            To calculate the speed of time stamps using this method of generation, the array size was pre-set to 10000 messages. Then the final time message value - the 
+                            first time message value was used for delta t (change in time). Then the number of messages (10000)/ delta t gave the message rate per second. 
+                            The code for the SEND_TIME_DATA section is as shown in the topmost figure in this section. After running SEND_TIME_DATA, the total time elapsed was 265 milliseconds. 10000 / 0.265 = 37735 time stamps generated per minute. 
+                            This demonstrates that it is much more efficient to generate many messages, time stamps, or calculations as possible before sending messages, 
+                            which takes longer.  Although it is not reasonable to display all 10000 messages, the lines of code used to run the command SEND_TIME_DATA and the first 
+                            few results are shown in the second figure.
+                        </p>
+                    </div>
+                    <div class="right-column" style="display: flex; align-items: center; justify-content: center;flex-direction: column;">
+                        <img src="files/FastRobots/Lab1/TIME_DATA_code.png" style="width:65vw;">
+                        <img src="files/FastRobots/Lab1/TIME_DATA_output.png" style="width:65vw;">
+                    </div>
+                </div>
+            </details>
         </div>
-        <div class="text-row" style="background-color: orangered;">
-            <div class="left-column">
-                <h3 style="color:black">Task 6</h3>
-                <p style="color:white">In Task 5, the goal was to see how fast messages could be sent. A new strategy was attempted to make the messages 
-                    faster in Task 6 in a new command SEND_TIME_DATA. All of the timestamps were generated and stored in an array "time_arr", and the messages in the 
-                    array were sent afterwards. 
-                    To calculate the speed of time stamps using this method of generation, the array size was pre-set to 10000 messages. Then the final time message value - the 
-                    first time message value was used for delta t (change in time). Then the number of messages (10000)/ delta t gave the message rate per second. 
-                    The code for the SEND_TIME_DATA section is as shown in the topmost figure in this section. After running SEND_TIME_DATA, the total time elapsed was 265 milliseconds. 10000 / 0.265 = 37735 time stamps generated per minute. 
-                    This demonstrates that it is much more efficient to generate many messages, time stamps, or calculations as possible before sending messages, 
-                    which takes longer.  Although it is not reasonable to display all 10000 messages, the lines of code used to run the command SEND_TIME_DATA and the first 
-                    few results are shown in the second figure.
-                </p>
-            </div>
-            <div class="right-column" style="display: flex; align-items: center; justify-content: center;flex-direction: column;">
-                 <img src="files/FastRobots/Lab1/TIME_DATA_code.png" style="width:65vw;">
-                 <img src="files/FastRobots/Lab1/TIME_DATA_output.png" style="width:65vw;">
-            </div>
+        <div class="white-row">
+            <details>
+                <summary><h3>Task 7</h3> <p>Send time AND temperature data (update artemis sending & computer notification handler recieving data)</p></summary>
+                <div class="text-row">
+                    <div class="left-column">
+                        <p>This task focused on using the same message strategy as Task 6, but for temperature data. All of the temperature readings 
+                            were to be gathered first before sending the temperature data array. Each timestamp recorded in "time_arr" corresponds to the same index 
+                            of "temp_arr". The format for time data is already "T:_time_", therefore the decided upon string to send time and temperature data was "T:_time_-C:_temperature_".
+                            In otherwords, T preceeds the time, C preceeds the temperature in celcius, and a dash "-" separates the time and temperature.
+                            The new command GET_TEMP_READINGS is used to collect this data and then loop through the arrays and send the data back. Furthermore, 
+                            it did not make sense to have all of the temperature readings from less than a second for delta t; these measurements would be too similar. Therefore, a 
+                            time delay was also added. The code to collect this data and add this time delay in GET_TEMP_READINGS is the topmost figure. 
+                            The notification handler also had to be updated to handle the time AND temperature readings. It both still prints the data (specifying 
+                            between time and temperature readings) and adds the time and temperature data into two respective lists. The updated notification handler code is the second 
+                            figure. It is not feasible to share all of the temperature outputs due to the volume of them. The first few readings of the 
+                            output of the code after using the GET_TEMP_READINGS command are in the third/ bottom figure. 
+                        </p>
+                    </div>
+                    <div class="right-column" style="display: flex; align-items: center; justify-content: center;flex-direction: column;">
+                        <img src="files/FastRobots/Lab1/TEMP_READINGS_code.png" style="width:65vw;">
+                        <img src="files/FastRobots/Lab1/TEMP_READINGS_code2.png" style="width:65vw;">
+                        <img src="files/FastRobots/Lab1/TEMP_READINGS_output.png" style="width:65vw;">
+                    </div>
+                </div>
+            </details>
         </div>
-        <div class="text-row">
-            <div class="left-column">
-                <h3 style="color:white;">Task 7</h3>
-                <p>This task focused on using the same message strategy as Task 6, but for temperature data. All of the temperature readings 
-                    were to be gathered first before sending the temperature data array. Each timestamp recorded in "time_arr" corresponds to the same index 
-                    of "temp_arr". The format for time data is already "T:_time_", therefore the decided upon string to send time and temperature data was "T:_time_-C:_temperature_".
-                    In otherwords, T preceeds the time, C preceeds the temperature in celcius, and a dash "-" separates the time and temperature.
-                    The new command GET_TEMP_READINGS is used to collect this data and then loop through the arrays and send the data back. Furthermore, 
-                    it did not make sense to have all of the temperature readings from less than a second for delta t; these measurements would be too similar. Therefore, a 
-                    time delay was also added. The code to collect this data and add this time delay in GET_TEMP_READINGS is the topmost figure. 
-                    The notification handler also had to be updated to handle the time AND temperature readings. It both still prints the data (specifying 
-                    between time and temperature readings) and adds the time and temperature data into two respective lists. The updated notification handler code is the second 
-                    figure. It is not feasible to share all of the temperature outputs due to the volume of them. The first few readings of the 
-                    output of the code after using the GET_TEMP_READINGS command are in the third/ bottom figure. 
-                </p>
-            </div>
-            <div class="right-column" style="display: flex; align-items: center; justify-content: center;flex-direction: column;">
-                <img src="files/FastRobots/Lab1/TEMP_READINGS_code.png" style="width:65vw;">
-                <img src="files/FastRobots/Lab1/TEMP_READINGS_code2.png" style="width:65vw;">
-                <img src="files/FastRobots/Lab1/TEMP_READINGS_output.png" style="width:65vw;">
-            </div>
-        </div>
-        <div class="text-row" style="background-color: white;">
-            <div class="left-column">
-                <h3>Task 8</h3>
-            </div>
-            <div class="right-column" style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
-                <p style="color:black">The advantage of sending data as it is aquired (NOT first put into an array) is that the data aquired is as relevant as possible to
-                    when it is being recieved. Storing all of the measurements in an array first makes so that time has passed before recieving the data, and only 
-                    the last measurements are likely going to be necessary. For times when computations need to be made in real time based on the current state of the board 
-                    or robot it is attached to, it would be wise NOT to store lots of data in an array before sending it. The second method has the advantage of collecting 
-                    more data per time period. According to the calculations in Task 6, 37735 time stamps were generated per minute suing this method. This is much greater than 
-                    the 35 messages per minute sent in Task 5.
-                    This increased time density and rate of transfer could be useful for complicated maneuvers. It would also be useful for 
-                    controllers such as a PID where past data or 
-                    analysis of trends is relevant. Another concern with the array method, however, is that the current lab 1 script already takes up 28% of the memory on the board. This 
-                    lab is introductory, and not nearly as complicated as an actual robot would be. Therefore, it is important to consider that if this method is used, 
-                    the memory constraints of the board are important. This concern can be mitigated by sending less of each kind of data (measurements over less time at 
-                    the increased time density OR adding an artificial delay to decrease the measurements over the same period of time). To be exact in these memory calculations, 
-                    the board has 384 kB of RAM. The floats for the time and temperature take up 4 bytes each. 384kB / 4 bytes = 96,000  floats that can be sent. These can 
-                    be divided among different measurements (ie time or temperature), and also must be regulated by the aforementioned number of measurements over time.</p>
-            </div>
+        <div class="orange-row">
+            <details>
+                <summary><h3>Task 8</h3> <p>Pros and Cons of Using Task 5 and Task 6 Data Sending Methods</p></summary>
+                <div class="text-row">
+                    <div class="right-column" style="width:100%;display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                        <p>The advantage of sending data as it is aquired (NOT first put into an array) is that the data aquired is as relevant as possible to
+                            when it is being recieved. Storing all of the measurements in an array first makes so that time has passed before recieving the data, and only 
+                            the last measurements are likely going to be necessary. For times when computations need to be made in real time based on the current state of the board 
+                            or robot it is attached to, it would be wise NOT to store lots of data in an array before sending it. The second method has the advantage of collecting 
+                            more data per time period. According to the calculations in Task 6, 37735 time stamps were generated per minute suing this method. This is much greater than 
+                            the 35 messages per minute sent in Task 5.
+                            This increased time density and rate of transfer could be useful for complicated maneuvers. It would also be useful for 
+                            controllers such as a PID where past data or 
+                            analysis of trends is relevant. Another concern with the array method, however, is that the current lab 1 script already takes up 28% of the memory on the board. This 
+                            lab is introductory, and not nearly as complicated as an actual robot would be. Therefore, it is important to consider that if this method is used, 
+                            the memory constraints of the board are important. This concern can be mitigated by sending less of each kind of data (measurements over less time at 
+                            the increased time density OR adding an artificial delay to decrease the measurements over the same period of time). To be exact in these memory calculations, 
+                            the board has 384 kB of RAM. The floats for the time and temperature take up 4 bytes each. 384kB / 4 bytes = 96,000  floats that can be sent. These can 
+                            be divided among different measurements (ie time or temperature), and also must be regulated by the aforementioned number of measurements over time.</p>
+                    </div>
+                </div>
+            </details>
         </div>
 
         <div style="background-color: black; margin: 10vh 100vw;"></div>
