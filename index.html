@@ -708,20 +708,24 @@
             </p>
         </div>
 
-        <div style="background-color: black; margin: 10vh 98vw;"></div>
-        <div style="width:98vw;">
-            <h3>General IMU Setup</h3>
-            <p style="color: white;">
-                The IMU was plugged in and the example code was run. In the example code, the AD0_VAL was also set to 1. This is the last bit of the I2C address, 
-                which is dependent on if the 
-                ADR jumper is closed (in this case it is closed). When testing the outputs of the values in the demo script, the gyroscope was 0
-                when the IMU is stationary and increases as the velocity of the IMU increases. The accelerometer shows the acceleration in each 
-                direction. The main board also blinks when the lab 2 script starts.
-            </p>
-        </div>
-        <div class="text-row" style="width:98vw;">
+        <div class="space"></div>
+        <div class="black-row">
+            <details>
+                <summary><h3 style="color:orangered">General IMU Setup</h3> <p>CLICK TO EXPAND</p></summary>
+                <p style="color: white;">
+                    The IMU was plugged in and the example code was run successfully.
+                    <br> <br> 
+                    In the example code, the AD0_VAL was also set to 1. This is the last bit of the I2C address, 
+                    which is dependent on if the 
+                    ADR jumper is closed (in this case it is closed). When testing the outputs of the values in the demo script, the gyroscope was 0
+                    when the IMU is stationary and increases as the velocity of the IMU increases. The accelerometer shows the acceleration in each 
+                    direction. The main board also blinks when the lab 2 script starts.
+                </p>
+                <div class="text-row" style="width:98vw;">
             <img src="files/FastRobots/Lab2/IMU.jpg" style="height:70vh;">
             <img src="files/FastRobots/Lab2/ExampleCode.png" style="height:70vh;"> 
+        </div>
+            </details>
         </div>
         <div style="background-color: black; margin: 10vh 98vw;"></div>
         <h3>Accelerometer</h3>
