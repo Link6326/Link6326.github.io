@@ -47,6 +47,9 @@
                 <button class="sublinks" onclick="openSubTab(event, 'MakeAThon_Overview')" id="defaultOpenMakeAThon">Project Overview</button>
                 <button class="sublinks" onclick="openSubTab(event, 'MakeAThon_Tools')">PLACEHOLDER</button> -->
         </div>
+        <div class="tab-set">
+            <button class="tablinks" onclick="openTab(event, 'Art')">Art Portfolio</button>
+        </div>
     </tab>
 
 
@@ -216,11 +219,11 @@
                 <div class="dropdown-label">
                     <p>Select A Part</p>
                     <div class="dropdown-options">
-                        <button class="dropbtn" onclick="openDropdownMenu(event, 'raspberryPi')">Raspberry Pi</button>
-                        <button class="dropbtn" onclick="openDropdownMenu(event, 'camera&lens')">Arducam & Lens</button>
-                        <button class="dropbtn" onclick="openDropdownMenu(event, 'featherM0Board')">AdaFruit Feather M0 Board</button>
-                        <button class="dropbtn" onclick="openDropdownMenu(event, 'ACDCBuckConverter')">AC-DC Buck Converter</button>
-                        <button class="dropbtn" onclick="openDropdownMenu(event, 'enclosure&switch')">Enclosure & Push Switch</button>
+                        <button class="dropbtn" onclick="openDropdownMenu(event, 'raspberryPi', '')">Raspberry Pi</button>
+                        <button class="dropbtn" onclick="openDropdownMenu(event, 'camera&lens', '')">Arducam & Lens</button>
+                        <button class="dropbtn" onclick="openDropdownMenu(event, 'featherM0Board', '')">AdaFruit Feather M0 Board</button>
+                        <button class="dropbtn" onclick="openDropdownMenu(event, 'ACDCBuckConverter', '')">AC-DC Buck Converter</button>
+                        <button class="dropbtn" onclick="openDropdownMenu(event, 'enclosure&switch', '')">Enclosure & Push Switch</button>
                     </div>
                 </div>
             </div>
@@ -383,9 +386,6 @@
         </div>
 
     </div>
-    <!-- <div id="SeniorDesign_LoRaWAN" class="subtabcontent">
-        
-    </div> -->
 
     <div id="FastRobot_Overview" class="subtabcontent">
         <div class="flashing-image-container" style="height:90vh; width:98vw;overflow:hidden;">
@@ -1581,6 +1581,123 @@
                 Maps API was connected to the robot even though the functionality of the Google Maps was not not finished during this time crunch.
             </p>
         </div>
+    </div>
+
+    <div id="Art" class="tabcontent" style="width:98vw;overflow:hidden;">
+        <div class="space"></div>
+        <div style="text-align: center;">
+            <h3>Portraits</h3>
+        </div>
+        <div class="dropdown-menu" style="position:absolute;left:42%;" >
+                <div class="dropdown-label">
+                    <p>Select A Portrait Type</p>
+                    <div class="dropdown-options">
+                        <button class="dropbtnPort" onclick="openDropdownMenu(event, 'default', 'Port')">Digital Art</button>
+                        <button class="dropbtnPort" onclick="openDropdownMenu(event, 'pencil', 'Port')">Black and White</button>
+                        <button class="dropbtnPort" onclick="openDropdownMenu(event, 'color', 'Port')">Color</button>
+                    </div>
+                </div>
+        </div>
+        <div class="space" style="margin: 12vh 98vw"></div>
+        <div class="dropdowncontentPort" id="defaultPort">
+            <div style="width:100%;height:70vh;display:flex;gap:5px;overflow: scroll;">
+                <img src="files/ArtPortfolio/Portrait_Digital/Digital_Port1.jpg" style="height:100%">
+                <img src="files/ArtPortfolio/Portrait_Digital/Digital_Port2.jpg" style="height:100%">
+                <img src="files/ArtPortfolio/Portrait_Digital/Digital_Port3.jpg" style="height:100%">
+            </div>
+        </div>
+        <div class="dropdowncontentPort" id="pencilPort">
+            <div style="width:100%;height:70vh;display:flex;gap:5px;overflow: scroll;">
+                <img src="files/ArtPortfolio/Portrait_BW/BW_Port0.jpg" style="height:100%">
+                <img src="files/ArtPortfolio/Portrait_BW/BW_Port0-2.jpg" style="height:100%">
+                <img src="files/ArtPortfolio/Portrait_BW/BW_Port1.jpg" style="height:100%">
+                <img src="files/ArtPortfolio/Portrait_BW/BW_Port2.jpg" style="height:100%">
+                <img src="files/ArtPortfolio/Portrait_BW/BW_Port3.jpg" style="height:100%">
+                <img src="files/ArtPortfolio/Portrait_BW/BW_Port4.jpg" style="height:100%">
+                <img src="files/ArtPortfolio/Portrait_BW/BW_Port5.jpg" style="height:100%">
+            </div>
+        </div>
+        <div class="dropdowncontentPort" id="colorPort">
+            <div style="width:100%;height:70vh;display:flex;gap:5px;overflow: scroll;">
+                <img src="files/ArtPortfolio/Portrait_Color/Color_Port1.jpg" style="height:100%">
+                <img src="files/ArtPortfolio/Portrait_Color/Color_Port2.jpg" style="height:100%">
+                <img src="files/ArtPortfolio/Portrait_Color/Color_Port3.jpg" style="height:100%">
+                <img src="files/ArtPortfolio/Portrait_Color/Color_Port4.jpg" style="height:100%">
+                <img src="files/ArtPortfolio/Portrait_Color/Color_Port5.jpg" style="height:100%">
+            </div>
+        </div>
+
+        <div style="text-align: center;padding:20px;">
+            <h3>Ink Pen Landscapes</h3>
+        </div>
+        <div style="width:100%;height:70vh;display:flex;gap:5px;overflow: scroll;">
+            <img src="files/ArtPortfolio/Landscapes/Land1.jpg" style="height:100%">
+            <img src="files/ArtPortfolio/Landscapes/Land2.jpg" style="height:100%">
+            <img src="files/ArtPortfolio/Landscapes/Land3.jpg" style="height:100%">
+            <img src="files/ArtPortfolio/Landscapes/Land4.jpg" style="height:100%">
+            <img src="files/ArtPortfolio/Landscapes/Land5.jpg" style="height:100%">
+        </div>
+
+        <div class="space"></div>
+        <div style="text-align: center;">
+            <h3>Creatures</h3>
+        </div>
+        <div class="dropdown-menu" style="position:absolute;left:42%;" >
+                <div class="dropdown-label">
+                    <p>Select A Creature Type</p>
+                    <div class="dropdown-options">
+                        <button class="dropbtnCreature" onclick="openDropdownMenu(event, 'default', 'Creature')">Dragons</button>
+                        <button class="dropbtnCreature" onclick="openDropdownMenu(event, 'misc', 'Creature')">Not Dragons</button>
+                    </div>
+                </div>
+        </div>
+        <div class="space" style="margin: 12vh 98vw"></div>
+        <div class="dropdowncontentCreature" id="defaultCreature">
+            <div style="width:100%;height:70vh;display:flex;gap:5px;overflow: scroll;">
+            <img src="files/ArtPortfolio/Creature_Dragon/Creature_Dragon0.jpg" style="height:100%">
+            <img src="files/ArtPortfolio/Creature_Dragon/Creature_Dragon1.jpg" style="height:100%">
+            <img src="files/ArtPortfolio/Creature_Dragon/Creature_Dragon2.jpg" style="height:100%">
+            <img src="files/ArtPortfolio/Creature_Dragon/Creature_Dragon3.jpg" style="height:100%">
+            </div>
+        </div>
+        <div class="dropdowncontentCreature" id="miscCreature">
+            <div style="width:100%;height:70vh;display:flex;gap:5px;overflow: scroll;">
+            <img src="files/ArtPortfolio/Creature_Misc/Creature_Misc1.jpg" style="height:100%">
+            <img src="files/ArtPortfolio/Creature_Misc/Creature_Misc2.jpg" style="height:100%">
+            <img src="files/ArtPortfolio/Creature_Misc/Creature_Misc3.jpg" style="height:100%">
+            <img src="files/ArtPortfolio/Creature_Misc/Creature_Misc4.jpg" style="height:100%">
+            <img src="files/ArtPortfolio/Creature_Misc/Creature_Misc5.jpg" style="height:100%">
+            <img src="files/ArtPortfolio/Creature_Misc/Creature_Misc6.jpg" style="height:100%">
+            <img src="files/ArtPortfolio/Creature_Misc/Creature_Misc7.jpg" style="height:100%">
+            <img src="files/ArtPortfolio/Creature_Misc/Creature_Misc8.jpg" style="height:100%">
+            <img src="files/ArtPortfolio/Creature_Misc/Creature_Misc9.jpg" style="height:100%">
+
+            </div>
+        </div>
+
+        <div style="text-align: center;padding:20px;">
+            <h3>Figure Sketches, Poses, and Cartoon Characters</h3>
+        </div>
+        <div style="width:100%;height:70vh;display:flex;gap:5px;overflow: scroll;">
+            <img src="files/ArtPortfolio/Figures/Figure1.jpg" style="height:100%">
+            <img src="files/ArtPortfolio/Figures/Figure2.jpg" style="height:100%">
+            <img src="files/ArtPortfolio/Figures/Figure3.jpg" style="height:100%">
+            <img src="files/ArtPortfolio/Figures/Figure4.jpg" style="height:100%">
+            <img src="files/ArtPortfolio/Figures/Figure5.jpg" style="height:100%">
+            <img src="files/ArtPortfolio/Figures/Figure6.jpg" style="height:100%">
+            <img src="files/ArtPortfolio/Figures/Figure7.jpg" style="height:100%">
+            <img src="files/ArtPortfolio/Figures/Figure8.jpg" style="height:100%">
+            <img src="files/ArtPortfolio/Figures/Figure9.jpg" style="height:100%">
+            <img src="files/ArtPortfolio/Figures/Figure10.jpg" style="height:100%">
+            <img src="files/ArtPortfolio/Figures/Figure10-2.jpg" style="height:100%">
+            <img src="files/ArtPortfolio/Figures/Figure11.jpg" style="height:100%">
+            <img src="files/ArtPortfolio/Figures/Figure12.jpg" style="height:100%">
+            <img src="files/ArtPortfolio/Figures/Figure13.jpg" style="height:100%">
+            <img src="files/ArtPortfolio/Figures/Figure14.jpg" style="height:100%">
+            <img src="files/ArtPortfolio/Figures/Figure15.jpg" style="height:100%">
+        </div>
+
+
     </div>
 
 

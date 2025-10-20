@@ -31,6 +31,28 @@ function openTab(event, tabName) {
         document.getElementById(tabName).style.display = "block";
         event.currentTarget.className += " active";
         document.body.scrollTop = document.documentElement.scrollTop = 0;
+    }else if (tabName="Art"){
+        //display Art tab instead of using sub tabs
+        document.getElementById(tabName).style.display = "block";
+        event.currentTarget.className += " active";
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+        // Open no content tab for dropdown menus 
+        menus= ["Port", "Creature"];
+        let len = menus.length;
+        for (let j = 0; j < len; j++){
+            dropdowncontent = document.getElementsByClassName("dropdowncontent"+menus[j]);
+            dropdownlinks = document.getElementsByClassName("dropbtn"+menus[j]);
+            // Hide all dropdown contents by default
+            for (i = 0; i < dropdowncontent.length; i++) {
+                dropdowncontent[i].style.display = "none";
+            }
+            // Remove the 'active' class from all dropdown links
+            for (i = 0; i < dropdownlinks.length; i++) {
+                dropdownlinks[i].className = dropdownlinks[i].className.replace(" active", "");
+            }
+            document.getElementById("default"+menus[j]).style.display = "block";
+        }
+
     }else {
         document.getElementById("defaultOpen" + tabName).click();
     }
@@ -84,10 +106,10 @@ function openSubTab(event, subTabName) {
 }
 
 // Open Dropdown Menu Content
-function openDropdownMenu(event, dropDownName) {
+function openDropdownMenu(event, dropDownName, menuName) {
     var i, dropdowncontent, dropdownlinks;
-    dropdowncontent = document.getElementsByClassName("dropdowncontent");
-    dropdownlinks = document.getElementsByClassName("dropbtn");
+    dropdowncontent = document.getElementsByClassName("dropdowncontent" + menuName);
+    dropdownlinks = document.getElementsByClassName("dropbtn" + menuName);
 
     // Hide all dropdown contents by default
     for (i = 0; i < dropdowncontent.length; i++) {
@@ -100,7 +122,7 @@ function openDropdownMenu(event, dropDownName) {
     }
 
     // Show the current dropdown content and add 'active' class to the clicked dropdown link
-    document.getElementById(dropDownName).style.display = "block";
+    document.getElementById(dropDownName + menuName).style.display = "block";
     event.currentTarget.className += " active";
 }
 
