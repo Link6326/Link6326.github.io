@@ -31,7 +31,7 @@ function openTab(event, tabName) {
         document.getElementById(tabName).style.display = "block";
         event.currentTarget.className += " active";
         document.body.scrollTop = document.documentElement.scrollTop = 0;
-    }else if (tabName="Art"){
+    }else if (tabName=="Art"){
         //display Art tab instead of using sub tabs
         document.getElementById(tabName).style.display = "block";
         event.currentTarget.className += " active";
@@ -52,7 +52,6 @@ function openTab(event, tabName) {
             }
             document.getElementById("default"+menus[j]).style.display = "block";
         }
-
     }else {
         document.getElementById("defaultOpen" + tabName).click();
     }
